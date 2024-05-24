@@ -5,18 +5,18 @@
         <div class="menu">
           <p class="buttons_text">Меню</p>
           <div class="submenu">
-            <p class="buttons_subtext">О нас</p>
-            <p class="buttons_subtext">Направления</p>
-            <p class="buttons_subtext">Новости</p>
-            <p class="buttons_subtext">Карта сайта</p>
+            <p class="buttons_subtext" @click="this.$router.push('/about')">О нас</p>
+            <p class="buttons_subtext" @click="this.$router.push('/trends')">Направления</p>
+            <p class="buttons_subtext" @click="this.$router.push('/news')">Новости</p>
+            <p class="buttons_subtext" @click="this.$router.push('/')">Карта сайта</p>
           </div>
         </div>
         <div class="menu">
           <p class="buttons_text">Сотрудничество</p>
           <div class="submenu">
-            <p class="buttons_subtext">Партнёрство</p>
+            <p class="buttons_subtext" @click="this.$router.push('/partner')">Карта сайта>Партнёрство</p>
             <p class="buttons_subtext">Вакансии</p>
-            <p class="buttons_subtext">Контакты</p>
+            <p class="buttons_subtext" @click="this.$router.push('/contact')">Карта сайта>Контакты</p>
             <p class="buttons_subtext">Награды</p>
           </div>
         </div>
