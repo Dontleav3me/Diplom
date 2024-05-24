@@ -1,5 +1,7 @@
 <template>
-  <div>dsds</div>
+  <div class="main">
+    
+  </div>
 </template>
 
 <script>

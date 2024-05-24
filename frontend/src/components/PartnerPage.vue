@@ -106,7 +106,8 @@ p {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: 45px;
-  justify-content: center; /* Центрирование сетки */
+  justify-content: center;
+  align-self: center;
 }
 .card {
   width: 240px;
