@@ -6,41 +6,21 @@
       Мы верим, что совместными усилиями государства, бизнеса и гражданского общества мы можем добиться устойчивого и долгосрочного благополучия для всех россиян.</p>
     <p class="trends">Направления развития</p>
     <div class="main_container">
-      <div class="card">
-        <p class="card_text">Культура и искусство</p>
-        <div class="img_container">
-          <img src="../../static/img/culture.svg" alt="" class="">
-          <button class="img_btn">Подробнее</button>
-        </div>
-      </div>
-      <div class="card">
-        <p class="card_text">Культура и искусство</p>
-        <div class="img_container">
-          <img src="../../static/img/culture.svg" alt="" class="">
-          <button class="img_btn">Подробнее</button>
-        </div>
-      </div>
-      <div class="card">
-        <p class="card_text">Культура и искусство</p>
-        <div class="img_container">
-          <img src="../../static/img/culture.svg" alt="" class="">
-          <button class="img_btn">Подробнее</button>
-        </div>
-      </div>
-      <div class="card">
-        <p class="card_text">Культура и искусство</p>
-        <div class="img_container">
-          <img src="../../static/img/culture.svg" alt="" class="">
-          <button class="img_btn">Подробнее</button>
-        </div>
-      </div>
+      <TrendsCard v-for="(direction, index) in directions" :key="index" :direction="direction" ></TrendsCard>
     </div>
   </div>
 </template>
 
 <script>
+import TrendsCard from '../components/TrendsCard.vue'
 export default {
-
+  components: { TrendsCard},
+  data() {
+    return {
+      directions: [{ 'name': 'fewfwefwfe','img': '../../' }]
+    }
+  },
+  
 }
 </script>
 
@@ -100,48 +80,7 @@ p{
 .main_container{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   gap: 60px;
-}
-.card_text{
-  font-family: Athelas;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 44.8px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #191819;  
-}
-.card{
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
-}
-.img_container{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-.img_btn {  
-  width: auto;
-  border: 1px solid #0D42A8;
-  padding: 10px 20px;
-  color: #0D42A8;
-  font-family: Inter;
-  font-size: 16px;
-  line-height: 19.36px;
-  text-align: center;
-  background: #FFFFFF;
-  border-radius: 3px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.img_btn:hover {
-  color: #FFFFFF;
-  background: #0D42A8;
-}
-img{
-  border-radius: 5px;
 }
 </style>

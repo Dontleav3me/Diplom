@@ -18,66 +18,27 @@
       <p class="project">Наши действующие проекты</p>
     </div>
     <div class="project_content">
-      <div class="card">
-        <p class="card_text">Помощь Донбассу</p>
-        <p class="card_subtext">Начиная с 2014 года проводится благотворительная акция по сбору средств и организации гуманитарной помощи братскому народу пострадавшему в результате военных действий и беспорядков на Донбассе</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
-      <div class="card">
-        <p class="card_text">Охрана здоровья</p>
-        <p class="card_subtext">благотворительная программа 2023-2028 «Информирование населения об основах охраны здоровья граждан в Российской Федерации»</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
-      <div class="card">
-        <p class="card_text">Образование с Африкой</p>
-        <p class="card_subtext">благотворительная программа по привлечению иностранных студентов стран Африки в вузы РФ на платной и бесплатной основе</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
-      <div class="card">
-        <p class="card_text">Помощь Донбассу</p>
-        <p class="card_subtext">Начиная с 2014 года проводится благотворительная акция по сбору средств и организации гуманитарной помощи братскому народу пострадавшему в результате военных действий и беспорядков на Донбассе;</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
-      <div class="card">
-        <p class="card_text">Разминирование</p>
-        <p class="card_subtext">Программа АНО «Центр по гуманитарному разминированию», для территорий республик Донбасса для ведения мирной, хозяйственной деятельности.</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
-      <div class="card">
-        <p class="card_text">Что-то еще (можно ставить картинки)</p>
-        <p class="card_subtext">Программа АНО «Центр по гуманитарному разминированию», для территорий республик Донбасса для ведения мирной, хозяйственной деятельности.</p>
-        <button class="card_btn">Подробнее</button>
-      </div>
+      <MainCard v-for="(project, index) in projects" :key="index" :project="project"></MainCard>
     </div>
     <div class="news_container">
       <p class="news">Последние новости</p>
     </div>
     <div class="news_container">
-      <div class="news_card">
-        <div class="img_container">
-          <img src="../../static/img/news_1.svg" alt="">
-        </div>
-        <p class="news_text">В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».</p>
-      </div>
-      <div class="news_card">
-        <div class="img_container">
-          <img src="../../static/img/news_1.svg" alt="">
-        </div>
-        <p class="news_text">В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».</p>
-      </div>
-      <div class="news_card">
-        <div class="img_container">
-          <img src="../../static/img/news_1.svg" alt="">
-        </div>
-        <p class="news_text">В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».</p>
-      </div>
+      <MainNewsCard v-for="(mininew, index) in mininews" :key="index" :mininew="mininew"></MainNewsCard>
     </div>
   </div>
 </template>
 
 <script>
+import MainCard from '../components/MainCard.vue'
+import MainNewsCard from '../components/MainNewsCard.vue'
 export default {
-
+  components: { MainCard, MainNewsCard},
+  data() {
+    return {
+      
+    }
+  },
 }
 </script>
 
@@ -182,54 +143,9 @@ video {
 .project_content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: 1fr;
   gap: 20px;
   margin-bottom: 30px;
-}
-.card {
-  padding: 48px;
-  border: 1px solid #0D42A8;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-radius: 5px;
-}
-.card_text {
-  font-family: Inter;
-  font-size: 24px;
-  line-height: 29.05px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #191819;
-}
-.card_subtext {
-  font-family: Inter;
-  font-size: 16px;
-  line-height: 19.36px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #191819;
-}
-.card_btn {
-  width: auto;
-  border: 1px solid #0D42A8;
-  padding: 10px 0px 10px 2px;
-  color: #0D42A8;
-  font-family: Inter;
-  font-size: 16px;
-  line-height: 19.36px;
-  text-align: left;
-  background: #FFFFFF;
-  border-radius: 3px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-.card_btn:hover {
-  color: #FFFFFF;
-  background: #0D42A8;
 }
 .news_container {
   width: 100%;
@@ -253,30 +169,6 @@ video {
   grid-row-gap: 0px;
   gap: 20px;
 }
-.news_card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  background: #4386C4;
-  padding: 38px;
-  border-radius: 3px;
-}
-.img_container{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50px;
-  height: 50px;
-  background: #FFFBFB;
-}
-.news_text{
-  font-family: Inter;
-  font-size: 16px;
-  line-height: 19.36px;
-  letter-spacing: -0.01em;
-  text-align: left;
-  color: #FFFBFB;
-}
+
 
 </style>

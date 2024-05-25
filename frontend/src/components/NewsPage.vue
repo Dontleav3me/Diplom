@@ -3,90 +3,27 @@
     <div class="header">
       <div class="header_container">
         <div class="header_text">
-          <p class="main_text">Вечный огонь доставили в Питер в целости и сохранности</p>
-          <p class="main_subtext">Вечный огонь был передан Церкви и далее его понесли по храмам и церквям Питера. Вечный огонь был передан Церкви и далее его понесли по храмам и церквям Питера</p>
+          <p class="main_text">{{ name }}</p>
+          <p class="main_subtext">{{ subname }}</p>
           <div class="descr">
-            <p class="main_descr">Благие дела</p>
+            <p class="main_descr">{{ dela }}</p>
             <div class="divider_height"></div>
-            <p class="main_descr">Церковь Святого...</p>
+            <p class="main_descr">{{ geo }}</p>
             <div class="divider_height"></div>
-            <p class="main_descr">25 мая, 2024</p>
+            <p class="main_descr">{{ date }}</p>
           </div>
         </div>
-        <img src="../../static/img/krest.svg" alt="">
+        <img src="{{ img }}" alt="">
       </div>
       <div class="wrapper">
-        <div class="header_card">
-          <img src="../../static/img/ikona.svg" alt="">
-          <div class="header_card_container">
-            <div class="card_head">
-              <p class="card_text">Церковь Святого</p>
-              <div class="divider_card"></div>
-              <p class="card_text">25 мая, 2024</p>
-            </div>
-            <p class="card_main_text">Вечный огонь привезли в Питер во все церкви и храмы...</p>
-            <div class="card_head">
-              <p class="card_text">Благие дела</p>
-              <div class="divider_card"></div>
-              <p class="card_text">8 мин чтения</p>
-            </div>
-          </div>
-        </div>
-        <div class="header_card">
-          <img src="../../static/img/ikona.svg" alt="">
-          <div class="header_card_container">
-            <div class="card_head">
-              <p class="card_text">Церковь Святого</p>
-              <div class="divider_card"></div>
-              <p class="card_text">25 мая, 2024</p>
-            </div>
-            <p class="card_main_text">Вечный огонь привезли в Питер во все церкви и храмы...</p>
-            <div class="card_head">
-              <p class="card_text">Благие дела</p>
-              <div class="divider_card"></div>
-              <p class="card_text">8 мин чтения</p>
-            </div>
-          </div>
-        </div>
-        <div class="header_card">
-          <img src="../../static/img/ikona.svg" alt="">
-          <div class="header_card_container">
-            <div class="card_head">
-              <p class="card_text">Церковь Святого</p>
-              <div class="divider_card"></div>
-              <p class="card_text">25 мая, 2024</p>
-            </div>
-            <p class="card_main_text">Вечный огонь привезли в Питер во все церкви и храмы...</p>
-            <div class="card_head">
-              <p class="card_text">Благие дела</p>
-              <div class="divider_card"></div>
-              <p class="card_text">8 мин чтения</p>
-            </div>
-          </div>
-        </div>
-        <div class="header_card">
-          <img src="../../static/img/ikona.svg" alt="">
-          <div class="header_card_container">
-            <div class="card_head">
-              <p class="card_text">Церковь Святого</p>
-              <div class="divider_card"></div>
-              <p class="card_text">25 мая, 2024</p>
-            </div>
-            <p class="card_main_text">Вечный огонь привезли в Питер во все церкви и храмы...</p>
-            <div class="card_head">
-              <p class="card_text">Благие дела</p>
-              <div class="divider_card"></div>
-              <p class="card_text">8 мин чтения</p>
-            </div>
-          </div>
-        </div>
+        <NewsTopCard v-for="(NewsTop, index) in NewsTops" :key="index" :NewsTop="NewsTop"></NewsTopCard>
       </div>
     </div>
     <div class="divider"></div>
     <p class="events_head">Важные события</p>
 <!--     <video src="../../static/img/krest.mp4" controls width="20%" height="500px"></video> -->
     <div class="events_container">
-      <p class="events_top">Вечный огонь доставили в Питер и передали городу</p>
+      <p class="events_top">{{ head }}</p>
       <div class="events_bottom">
         <div class="events_left">
           <div class="event_bold">
@@ -115,62 +52,17 @@
     </div>
     <p class="news_head">Новости и события</p>
     <div class="news_wrapper">
-      <div class="news_card">
-        <img src="../../static/img/news.svg" alt="">
-        <div class="news_container">
-          <p class="news_heads">Помощь Донбассу и его жителям</p>
-          <p class="news_subhead">Наши ребята приехали и установили крест в честь погибших солдат...</p>
-        </div>
-        <div class="card_head">
-          <p class="card_text">Благие дела</p>
-          <div class="divider_card"></div>
-          <p class="card_text">8 мин чтения</p>
-        </div>
-      </div>
-      <div class="news_card">
-        <img src="../../static/img/news.svg" alt="">
-        <div class="news_container">
-          <p class="news_heads">Помощь Донбассу и его жителям</p>
-          <p class="news_subhead">Наши ребята приехали и установили крест в честь погибших солдат...</p>
-        </div>
-        <div class="card_head">
-          <p class="card_text">Благие дела</p>
-          <div class="divider_card"></div>
-          <p class="card_text">8 мин чтения</p>
-        </div>
-      </div>
-      <div class="news_card">
-        <img src="../../static/img/news.svg" alt="">
-        <div class="news_container">
-          <p class="news_heads">Помощь Донбассу и его жителям</p>
-          <p class="news_subhead">Наши ребята приехали и установили крест в честь погибших солдат...</p>
-        </div>
-        <div class="card_head">
-          <p class="card_text">Благие дела</p>
-          <div class="divider_card"></div>
-          <p class="card_text">8 мин чтения</p>
-        </div>
-      </div>
-      <div class="news_card">
-        <img src="../../static/img/news.svg" alt="">
-        <div class="news_container">
-          <p class="news_heads">Помощь Донбассу и его жителям</p>
-          <p class="news_subhead">Наши ребята приехали и установили крест в честь погибших солдат...</p>
-        </div>
-        <div class="card_head">
-          <p class="card_text">Благие дела</p>
-          <div class="divider_card"></div>
-          <p class="card_text">8 мин чтения</p>
-        </div>
-      </div>
+      <NewsBottomCard v-for="(NewsBottom, index) in NewsBottoms" :key="index" :NewsBottom="NewsBottom"></NewsBottomCard>
     </div>
     <button class="over_btn">Больше новостей</button>
   </div>
 </template>
 
 <script>
+import NewsTopCard from '../components/NewsTopCard.vue'
+import NewsBottomCard from '../components/NewsBottomCard.vue'
 export default {
-
+  components: { NewsTopCard, NewsBottomCard},
 }
 </script>
 
@@ -242,34 +134,9 @@ img{
   margin-top: 30px;
   margin-bottom: 55px;
 }
-.card_text{
-  font-family: Inter;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  color: #000000CC;
-}
-.card_head{
-  display: flex;
-  gap: 16px;
-}
 .header{
   display: flex;
   gap: 15px;
-}
-.header_card{
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-}
-.card_text{
-  font-family: Inter;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
-  text-align: left;
-  color: #000000CC;
 }
 .card_main_text{
   font-family: Inter;
@@ -279,12 +146,7 @@ img{
   text-align: left;
   color: #000000;
 }
-.header_card_container{
-  max-width: 270px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 p{
   margin: 0;
 }
@@ -383,33 +245,6 @@ p{
   margin-bottom: 40px;
   display: flex;
   align-self: flex-start;
-}
-.news_card{
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 320px;
-} 
-.news_container{
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.news_heads{
-  font-family: Inter;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  color: #000000;
-}
-.news_subhead{
-  font-family: Inter;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 22px;
-  text-align: left;
-  color: #3D3D3D;
 }
 .news_wrapper{
   display: grid;
