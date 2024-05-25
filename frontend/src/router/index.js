@@ -50,4 +50,13 @@ const router = createRouter({
   routes
 })
 
+router.beforeEach((to, from, next) => {
+  const routeExists = routes.some(route => route.path === to.path);
+  if (!routeExists) {
+    next('/error');
+  } else {
+    next();
+  }
+});
+
 export default router
