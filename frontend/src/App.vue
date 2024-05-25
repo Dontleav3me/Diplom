@@ -1,31 +1,37 @@
 <template>
-  <NavbarPage></NavbarPage>
-  <router-view></router-view>
-  <FooterPage></FooterPage>
+  <div class="main" v-if="isErrorPage">
+    <NavbarPage></NavbarPage>
+    <router-view></router-view>
+    <FooterPage></FooterPage>
+  </div>
+  <ErrorPage v-else></ErrorPage>
 </template>
 
 
 <script>
 import NavbarPage from './components/NavbarPage.vue';
 import FooterPage from './components/FooterPage.vue';
+import ErrorPage from './components/ErrorPage.vue';
 
 export default {
-  components: { NavbarPage, FooterPage },
+  components: { NavbarPage, FooterPage, ErrorPage },
   data() {
     return {
       
     }
   },
+  computed:{
+    isErrorPage(){
+      console.log(this.$route.name)
+      return this.$route.name != "error"
+    }
+  }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 body{
   margin: 0;

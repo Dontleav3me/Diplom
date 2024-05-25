@@ -5,6 +5,7 @@ import TrendsPage from '../components/TrendsPage.vue'
 import PartnerPage from '../components/PartnerPage.vue'
 import NewsPage from '../components/NewsPage.vue'
 import ContactPage from '../components/ContactPage.vue'
+import ErrorPage from '../components/ErrorPage.vue'
 
 const routes = [
   {
@@ -36,6 +37,11 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactPage
+  },
+  {
+    path: '/error',
+    name: 'error',
+    component: ErrorPage
   },
 ]
 

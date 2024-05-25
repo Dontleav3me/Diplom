@@ -8,11 +8,11 @@
       <div class="info_wrapper">
         <div class="info">
           <img src="../../static/img/mail.svg" alt="">
-          <p class="info_text">Электронная почта: aiz-9465297@yandex.ru</p>
+          <p class="info_text">Электронная почта: info@foundation-an.ru</p>
         </div>
         <div class="info">
           <img src="../../static/img/phone.svg" alt="">
-          <p class="info_text">Телефон: +7 (812) 946-52-98</p>
+          <p class="info_text">Телефон: +7 (812) 426-70-77</p>
         </div>
         <div class="info">
           <img src="../../static/img/geo.svg" alt="">

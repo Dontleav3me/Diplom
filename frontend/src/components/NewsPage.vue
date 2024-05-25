@@ -240,6 +240,7 @@ img{
   justify-content: space-between;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: 55px;
 }
 .card_text{
   font-family: Inter;
