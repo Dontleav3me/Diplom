@@ -3,7 +3,7 @@
     <img src="../../static/img/logo_error.svg" alt="" class="img_error">
     <p class="main_text">Приносим извинения за предоставленные неудобства</p>
     <p class="main_subtext">Страница не найдена<br>Ошибка 404</p>
-    <button class="back">Вернуться на  главную страницу</button>
+    <button class="back" @click="this.$router.push('/')">Вернуться на  главную страницу</button>
     <div class="container">
       <p class="main_descr">МБОФ им. А. Невского © 2015–2024</p>
       <p class="main_descr cursor">Terms & policies</p>
@@ -26,7 +26,7 @@ export default {
   align-items: center;
 }
 .img_error{
-  margin-top: 30    px;
+  margin-top: 30px;
   margin-bottom: 20px;
 }
 .main_text{
