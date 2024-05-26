@@ -20,7 +20,7 @@
     </router-link>
     <div class="nav_container">
       <img src="../../static/img/logo.svg" alt="" draggable="false"
-      @click="this.$router.push('/')">
+      @click="resetMenuItem">
     </div>
     <router-link to="/news" style="text-decoration: none;">
       <div 
@@ -62,6 +62,10 @@ export default {
   methods: {
     selectMenuItem(item) {
       this.selectedMenuItem = item;
+    },
+    resetMenuItem() {
+      this.selectedMenuItem = null;
+      this.$router.push('/');
     }
   }
 }
@@ -102,7 +106,7 @@ export default {
 .nav_container:hover::after {
   opacity: 1;
 }
-p{
+p {
   margin: 0;
 }
 </style>
