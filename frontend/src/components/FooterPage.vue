@@ -74,7 +74,7 @@ export default {
   color: #0D42A8;
   font-size: 16px;
   text-align: left;
-  font-family: Inter;
+  font-family: Inter Medium;
 }
 .footer_container{
   display: flex;
@@ -84,14 +84,14 @@ export default {
   color: #191819;
   font-size: 21px;
   text-align: left;
-  font-family: Inter;
+  font-family: Inter Medium;
   user-select: none;
 }
 .buttons_subtext{
   color: #191819;
   font-size: 13 px;
   text-align: left;
-  font-family: Inter;
+  font-family: Inter Medium;
   user-select: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -131,7 +131,7 @@ p{
   color: #0D42A8;
   font-size: 12px;
   text-align: left;
-  font-family: Inter;
+  font-family: Inter Regular;
 }
 .footer_bottom{
   display: flex;

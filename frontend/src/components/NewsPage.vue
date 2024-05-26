@@ -120,7 +120,7 @@ img{
   gap: 16px;
 }
 .more_text{
-  font-family: Helvetica Neue;
+  font-family: Inter Regular;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -189,7 +189,7 @@ p{
   color: #000000;
 }
 .events_text{
-  font-family: Inter;
+  font-family: Inter Medium;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -222,8 +222,8 @@ p{
   border: 1px solid #0D42A8;
   padding: 5px 30px;
   color: #0D42A8;
-  font-family: Inter;
-  font-size: 16px;
+  font-family: Inter SemiBold;
+  font-size: 14px;
   line-height: 19.36px;
   text-align: center;
   background: #FFFFFF;
@@ -258,10 +258,9 @@ p{
   border: 1px solid #0D42A8;
   padding: 5px 30px;
   color: #0D42A8;
-  font-family: Inter;
-  font-size: 24px;
+  font-family: Inter SemiBold;
+  font-size: 14px;
   line-height: 29.05px;
-  font-weight: 600;
   text-align: center;
   background: #FFFFFF;
   border-radius: 3px;

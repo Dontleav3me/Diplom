@@ -64,7 +64,7 @@ p {
   border: 1px solid #0D42A8;
   padding: 10px 0px 10px 2px;
   color: #0D42A8;
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 16px;
   line-height: 19.36px;
   text-align: left;
@@ -93,7 +93,7 @@ p {
   margin-bottom: 35px;
 }
 .subheader {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
@@ -117,7 +117,7 @@ video {
   align-items: flex-start;
 }
 .proekt_text {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;

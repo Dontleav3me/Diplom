@@ -42,9 +42,8 @@ export default {
   margin-bottom: 80px;
 }
 .main_text{
-  font-family: Inter;
-  font-size: 24px;
-  font-weight: 600;
+  font-family: Inter Medium;
+  font-size: 21px;
   line-height: 29.05px;
   letter-spacing: -0.01em;
   text-align: left;

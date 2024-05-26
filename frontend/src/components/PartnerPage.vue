@@ -54,7 +54,7 @@ p {
   max-width: 980px;
 }
 .subhead {
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 24px;
   font-weight: 600;
   line-height: 29.05px;
@@ -65,7 +65,7 @@ p {
   margin-bottom: 22px;
 }
 .descr {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.36px;
@@ -76,7 +76,7 @@ p {
   margin-bottom: 60px;
 }
 .spectr_text {
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 24px;
   font-weight: 600;
   line-height: 29.05px;
@@ -85,7 +85,7 @@ p {
   color: #191819;
 }
 .spectr_subtext {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   font-weight: 400;
   line-height: 19.36px;

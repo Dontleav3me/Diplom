@@ -30,6 +30,30 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Athelas';
+  src:url('../static/fonts/Athelas/Athelas-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter SemiBold';
+  src:url('../static/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter Regular';
+  src:url('../static/fonts/Inter/Inter-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Inter Medium';
+  src:url('../static/fonts/Inter/Inter-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 #app {
   text-align: center;
 }

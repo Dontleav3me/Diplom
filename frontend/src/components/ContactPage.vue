@@ -65,7 +65,7 @@ export default {
   color: #191819;
 }
 .contact_subtext{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
@@ -83,9 +83,8 @@ p{
   margin: 0;
 }
 .info_text{
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 24px;
-  font-weight: 600;
   line-height: 29.05px;
   letter-spacing: -0.01em;
   text-align: left;
@@ -106,7 +105,7 @@ p{
   align-items: flex-start;
 }
 .proekt_text {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
@@ -158,9 +157,8 @@ p{
   gap: 270px;
 }
 .bottom_text{
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 24px;
-  font-weight: 600;
   line-height: 29.05px;
   letter-spacing: -0.01em;
   text-align: left;

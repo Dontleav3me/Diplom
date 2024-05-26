@@ -84,7 +84,7 @@ export default {
 .nav_text {
   color: #191819;
   font-size: 20px;
-  font-family: Inter;
+  font-family: Inter Regular;
   text-align: left;
 }
 .nav_container::after {

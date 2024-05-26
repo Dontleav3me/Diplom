@@ -45,7 +45,7 @@ export default {
   border: 1px solid #0D42A8;
   padding: 10px 20px;
   color: #0D42A8;
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 16px;
   line-height: 19.36px;
   text-align: center;
@@ -60,5 +60,8 @@ export default {
 }
 img{
   border-radius: 5px;
+}
+p{
+  margin: 0;
 }
 </style>

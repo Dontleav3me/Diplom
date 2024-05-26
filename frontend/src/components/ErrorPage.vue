@@ -1,6 +1,6 @@
 <template>
   <div class="main">
-    <img src="../../static/img/logo_error.svg" alt="" class="img_error">
+    <img src="../../static/img/logo_error.svg" alt="" class="img_error" draggable="false">
     <p class="main_text">Приносим извинения за предоставленные неудобства</p>
     <p class="main_subtext">Страница не найдена<br>Ошибка 404</p>
     <button class="back" @click="this.$router.push('/')">Вернуться на  главную страницу</button>
@@ -57,7 +57,7 @@ p{
   border: 1px solid #0D42A8;
   padding: 10px 120px;
   color: #0D42A8;
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 16px;
   line-height: 19.36px;
   text-align: center;
@@ -76,7 +76,7 @@ p{
   gap: 35px;
 }
 .main_descr{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 12px;
   font-weight: 400;
   line-height: 21px;
