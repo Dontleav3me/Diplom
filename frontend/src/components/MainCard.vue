@@ -27,7 +27,7 @@ export default {
   border-radius: 5px;
 }
 .card_text {
-  font-family: Inter;
+  font-family: Inter SemiBold;
   font-size: 24px;
   line-height: 29.05px;
   letter-spacing: -0.01em;
@@ -35,7 +35,7 @@ export default {
   color: #191819;
 }
 .card_subtext {
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;

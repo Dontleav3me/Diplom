@@ -2,7 +2,7 @@
   <div class="card">
     <p class="card_text">{{ direction.name }}</p>
     <div class="img_container">
-      <img src="{{ direction.img }}" alt="" class="">
+      <img :src="direction.img" alt="" class="">
       <button class="img_btn">Подробнее</button>
     </div>
   </div>
@@ -32,7 +32,7 @@ export default {
   font-weight: 400;
   line-height: 44.8px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: center;
   color: #191819;  
 }
 .img_container{
