@@ -21,7 +21,16 @@ export default {
 
     }
   },
-  
+  methods: {
+    async get_uslugi(){
+      try {
+        const response = await axios.get(`http://127.0.0.1:8000/api/directions/`);
+        this.directions = response.data;
+      } catch (error) {
+        console.error('Error fetching uslugi:', error);
+      }
+    },
+}
 }
 </script>
 
