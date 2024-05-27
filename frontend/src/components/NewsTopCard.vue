@@ -1,6 +1,6 @@
 <template>
   <div class="header_card">
-    <img src="../../static/img/ikona.svg" alt="">
+    <img :src="NewsTop.img" alt="">
     <div class="header_card_container">
       <div class="card_head">
         <p class="card_text">{{ NewsTop.head }}</p>
