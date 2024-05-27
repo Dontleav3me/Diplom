@@ -13,6 +13,7 @@
 
 <script>
 import TrendsCard from '../components/TrendsCard.vue'
+import axios from 'axios'
 export default {
   components: { TrendsCard},
   data() {
@@ -22,7 +23,7 @@ export default {
     }
   },
   methods: {
-    async get_uslugi(){
+    async get_directions(){
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/directions/`);
         this.directions = response.data;
@@ -30,6 +31,9 @@ export default {
         console.error('Error fetching uslugi:', error);
       }
     },
+},
+computed(){
+  this.get_directions();
 }
 }
 </script>

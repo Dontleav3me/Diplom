@@ -1,7 +1,7 @@
 <template>
   <div class="news_card">
     <div class="img_container">
-      <img :src="mininew.img" alt="">
+      <img :src="mininew.image" alt="">
     </div>
     <p class="news_text">{{ mininew.name }}</p>
   </div>  
