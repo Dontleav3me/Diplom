@@ -13,7 +13,7 @@
             <p class="main_descr">{{ date }}</p>
           </div>
         </div>
-        <img src="{{ img }}" alt="">
+        <img :src="img" alt="">
       </div>
       <div class="wrapper">
         <NewsTopCard v-for="(NewsTop, index) in NewsTops" :key="index" :NewsTop="NewsTop"></NewsTopCard>
@@ -72,14 +72,14 @@ export default {
       subname: '',
       dela: '',
       geo: '',
-      date: ''
+      date: '',
+      img: '',
     }
   },
   methods: {
     async get_solonews(){
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/solo_news/`);
-        print(response,123)
         this.name = response.data[0].name;
         this.subname = response.data[0].subname;
         this.dela = response.data[0].dela;
