@@ -172,6 +172,7 @@ video {
   grid-template-rows: 1fr;
   gap: 20px;
   margin-bottom: 30px;
+  align-self: flex-start;
 }
 .news_container {
   width: 100%;

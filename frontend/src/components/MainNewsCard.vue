@@ -53,4 +53,8 @@ p{
   text-align: left;
   color: #FFFBFB;
 }
+img{
+  width: 24px;
+  height: 20px;
+}
 </style>

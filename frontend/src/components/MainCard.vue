@@ -19,6 +19,7 @@ export default {
 
 <style scoped>
 .card {
+  width: auto;
   padding: 48px;
   border: 1px solid #0D42A8;
   display: flex;
@@ -45,7 +46,7 @@ export default {
 .card_btn {
   width: auto;
   border: 1px solid #0D42A8;
-  padding: 10px 0px 10px 2px;
+  padding: 10px 100px 10px 100px;
   color: #0D42A8;
   font-family: Inter;
   font-size: 16px;

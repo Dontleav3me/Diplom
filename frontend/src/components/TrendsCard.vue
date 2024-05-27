@@ -63,6 +63,8 @@ export default {
 }
 img{
   border-radius: 5px;
+  width: 495px;
+  height: 305px;
 }
 p{
   margin: 0;
