@@ -1,7 +1,7 @@
 <template>
   <div class="news_card">
     <div class="img_container">
-      <img :src="mininew.image" alt="">
+      <img :src="image" alt="">
     </div>
     <p class="news_text">{{ mininew.name }}</p>
   </div>  
@@ -11,10 +11,16 @@
 export default {
   data() {
     return {
-      
+      image: ''
     }
   },
   props: ['mininew'],
+  mounted(){
+    console.log('77777777777',this.mininew)
+    this.image = 'http://127.0.0.1:8000/' + this.mininew.image;
+    console.log('121312312312312312312',this.image)
+  },
+
 }
 </script>
 

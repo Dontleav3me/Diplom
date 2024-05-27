@@ -32,7 +32,7 @@ export default {
       }
     },
 },
-computed(){
+mounted(){
   this.get_directions();
 }
 }

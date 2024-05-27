@@ -2,7 +2,7 @@
   <div class="card">
     <p class="card_text">{{ direction.name }}</p>
     <div class="img_container">
-      <img src="{{ direction.image }}" alt="" class="">
+      <img :src="image" alt="" class="">
       <button class="img_btn">Подробнее</button>
     </div>
   </div>
@@ -12,10 +12,13 @@
 export default {
   data() {
     return {
-      
+      image: ''
     }
   },
   props: ['direction'],
+  mounted(){
+    this.image = 'http://127.0.0.1:8000/'+this.direction.image
+  }
 }
 </script>
 

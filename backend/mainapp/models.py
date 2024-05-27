@@ -20,6 +20,7 @@ class BottomNews(models.Model):
     subname = models.CharField(max_length=256)
     time = models.CharField(max_length=256)
     dela = models.CharField(max_length=256)
+    image = models.ImageField(upload_to='images/')
 
 class MiniNew(models.Model):
     image = models.ImageField(upload_to='images/')
@@ -31,8 +32,17 @@ class SoloNews(models.Model):
     dela = models.CharField(max_length=256)
     geo = models.CharField(max_length=256)
     date = models.CharField(max_length=256)
-    img = models.ImageField(max_length=256)
+    image = models.ImageField(max_length=256)
     head = models.CharField(max_length=256)
+
+
+class NewsTop(models.Model):
+    image = models.ImageField(upload_to='images/')
+    head = models.CharField(max_length=256)
+    date = models.CharField(max_length=256)
+    name = models.CharField(max_length=256)
+    dela = models.CharField(max_length=512)
+    time = models.CharField(max_length=256)
 
 admin.site.register(project)
 admin.site.register(Directions)
@@ -40,3 +50,4 @@ admin.site.register(News)
 admin.site.register(BottomNews)
 admin.site.register(MiniNew)
 admin.site.register(SoloNews)
+admin.site.register(NewsTop)

@@ -1,6 +1,6 @@
 <template>
   <div class="header_card">
-    <img :src="NewsTop.img" alt="">
+    <img :src="image" alt="">
     <div class="header_card_container">
       <div class="card_head">
         <p class="card_text">{{ NewsTop.head }}</p>
@@ -21,10 +21,13 @@
 export default {
   data() {
     return {
-      
+      image: ''
     }
   },
   props: ['NewsTop'],
+  mounted(){
+    this.image = 'http://127.0.0.1:8000/' + this.NewsTop.image;
+  }
 }
 </script>
 

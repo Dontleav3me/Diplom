@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import project, Directions, News, BottomNews, MiniNew, SoloNews
+from .models import project, Directions, News, BottomNews, MiniNew, SoloNews,NewsTop
 
 class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
@@ -29,4 +29,9 @@ class MiniNewSerializer(serializers.ModelSerializer):
 class SoloNewsSerializer(serializers.ModelSerializer):
     class Meta:
         model = SoloNews
+        fields = '__all__'
+
+class NewsTopSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = NewsTop
         fields = '__all__'
