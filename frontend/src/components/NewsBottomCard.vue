@@ -1,6 +1,6 @@
 <template>
   <div class="news_card">
-    <img src="../../static/img/news.svg" alt="">
+    <img :src="NewsBottom.img" alt="">
     <div class="news_container">
       <p class="news_heads">{{ NewsBottom.name }}</p>
       <p class="news_subhead">{{ NewsBottom.subname }}</p>
