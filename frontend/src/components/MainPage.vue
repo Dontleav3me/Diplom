@@ -32,6 +32,7 @@
 <script>
 import MainCard from '../components/MainCard.vue'
 import MainNewsCard from '../components/MainNewsCard.vue'
+import axios from 'axios'
 export default {
   components: { MainCard, MainNewsCard},
   data() {
@@ -41,7 +42,30 @@ export default {
       ],
       mininews: [{ name: 'В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».'},{ name: 'В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».'},{ name: 'В 2014- 2018 г.г. активно участвовал в масштабной программе создания Культурно-Оздоровительного Кластера в Курортном районе г. Санкт-Петербурга по правительственной программе «Оздоровительного туризма».'}],
     }
-  },
+  },  
+  methods: {
+    async get_projects(){
+      try {
+        const response = await axios.get(`http://127.0.0.1:8000/api/projects/`);
+        this.projects = response.data;
+      } catch (error) {
+        console.error('Error fetching uslugi:', error);
+      }
+    },
+    async get_mininews(){
+      try {
+        const response = await axios.get(`http://127.0.0.1:8000/api/mini_news/`);
+        this.mininews = response.data;
+      } catch (error) {
+        console.error('Error fetching uslugi:', error);
+      }
+    },
+},
+computed(){
+  this.get_projects();
+  this.get_mininews();
+}
+  
 }
 </script>
 
