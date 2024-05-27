@@ -63,6 +63,17 @@ import NewsTopCard from '../components/NewsTopCard.vue'
 import NewsBottomCard from '../components/NewsBottomCard.vue'
 export default {
   components: { NewsTopCard, NewsBottomCard},
+  data() {
+    return {
+      NewsTops: [{ head: 'Церковь Святого', date: '13 мая, 2024', name: 'Вечный огонь привезли в Питер во все церкви и храмы', dela: 'Благие дела', time: '8 мин чтения'}],
+      NewsBottoms: [{ name:'Помощь Донбассу и его жителям', subname: 'Наши ребята приехали и установили крест в честь погибших солдат...', dela: 'Помощь Донбассу', time: '2 мин чтения' }],
+      name: 'Вечный огонь доставили в Питер в целости и сохранности',
+      subname: 'Вечный огонь был передан Церкви и далее его понесли по храмам и церквям Питера. Вечный огонь был передан Церкви и далее его понесли по храмам и церквям Питера',
+      dela: 'Благие дела',
+      geo: 'Церковь Святого...',
+      date: '25 мая, 2024'
+    }
+  },
 }
 </script>
 
