@@ -84,7 +84,7 @@ export default {
         this.subname = response.data[0].subname;
         this.dela = response.data[0].dela;
         this.geo = response.data[0].geo;
-        this.img = response.data[0].img;
+        this.img = 'http://127.0.0.1:8000'+response.data[0].img;
         this.head = response.data[0].head;
       } catch (error) {
         console.error('Error fetching uslugi:', error);

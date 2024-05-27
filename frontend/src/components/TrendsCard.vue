@@ -17,7 +17,7 @@ export default {
   },
   props: ['direction'],
   mounted(){
-    this.image = 'http://127.0.0.1:8000/'+this.direction.image
+    this.image = 'http://127.0.0.1:8000'+this.direction.image
   }
 }
 </script>

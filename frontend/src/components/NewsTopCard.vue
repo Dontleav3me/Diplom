@@ -26,7 +26,7 @@ export default {
   },
   props: ['NewsTop'],
   mounted(){
-    this.image = 'http://127.0.0.1:8000/' + this.NewsTop.image;
+    this.image = 'http://127.0.0.1:8000' + this.NewsTop.image;
   }
 }
 </script>
