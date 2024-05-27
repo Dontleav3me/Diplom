@@ -2,7 +2,7 @@
   <div class="card">
     <p class="card_text">{{ direction.name }}</p>
     <div class="img_container">
-      <img src="{{ direction.img }}" alt="" class="">
+      <img src="{{ direction.image }}" alt="" class="">
       <button class="img_btn">Подробнее</button>
     </div>
   </div>
