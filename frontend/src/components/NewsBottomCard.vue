@@ -75,5 +75,7 @@ p{
 }
 img{
   border-radius: 5px;
+  width: 316px;
+  height: 280px;
 }
 </style>

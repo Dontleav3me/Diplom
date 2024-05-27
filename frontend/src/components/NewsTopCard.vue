@@ -69,4 +69,9 @@ p{
   text-align: left;
   color: #000000;
 }
+img{
+  width: 114px;
+  height: 118px;
+  border-radius: 5px;
+}
 </style>
