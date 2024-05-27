@@ -32,7 +32,7 @@ export default {
   font-weight: 400;
   line-height: 44.8px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: center;
   color: #191819;  
 }
 .img_container{
