@@ -32,7 +32,7 @@ class SoloNews(models.Model):
     dela = models.CharField(max_length=256)
     geo = models.CharField(max_length=256)
     date = models.CharField(max_length=256)
-    image = models.ImageField(max_length=256)
+    image = models.ImageField(upload_to='images/')
     head = models.CharField(max_length=256)
 
 
