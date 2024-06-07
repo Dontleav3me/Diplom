@@ -43,7 +43,7 @@ p{
   gap: 8px;
 }
 .news_heads{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
@@ -51,7 +51,7 @@ p{
   color: #000000;
 }
 .news_subhead{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -59,7 +59,7 @@ p{
   color: #3D3D3D;
 }
 .card_text{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;

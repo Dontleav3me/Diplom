@@ -4,7 +4,6 @@
     <button class="head_btn" @click="this.$router.push('/trends')">Направления и развития</button>
     <div class="divider"></div>
     <p class="subheader">Фонд помощи ветеранам, инвалидам правоохранительных органов и их семей, относящимся в то время практически к малоимущим слоям населения</p>
-    <video src=""></video>
     <div class="proekt_container">
       <div class="proekt_content">
         <p class="proekt_text">

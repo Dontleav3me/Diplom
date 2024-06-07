@@ -13,16 +13,16 @@
             <p class="main_descr">{{ date }}</p>
           </div>
         </div>
-        <img :src="img" alt="">
+        <img :src="img" alt="" class="news_img">
       </div>
       <div class="wrapper">
         <NewsTopCard v-for="(NewsTop, index) in NewsTops" :key="index" :NewsTop="NewsTop"></NewsTopCard>
       </div>
     </div>
     <div class="divider"></div>
-    <p class="events_head">Важные события</p>
+<!--     <p class="events_head">Важные события</p> -->
 <!--     <video src="../../static/img/krest.mp4" controls width="20%" height="500px"></video> -->
-    <div class="events_container">
+<!--     <div class="events_container">
       <p class="events_top">{{ head }}</p>
       <div class="events_bottom">
         <div class="events_left">
@@ -49,7 +49,7 @@
           Подробнее
         </button>
       </div>
-    </div>
+    </div> -->
     <p class="news_head">Новости и события</p>
     <div class="news_wrapper">
       <NewsBottomCard v-for="(NewsBottom, index) in NewsBottoms" :key="index" :NewsBottom="NewsBottom"></NewsBottomCard>
@@ -133,7 +133,7 @@ mounted(){
   max-width: 450px;
 }
 .main_subtext{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
@@ -189,14 +189,17 @@ img{
   gap: 15px;
 }
 .card_main_text{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
   text-align: left;
   color: #000000;
 }
-
+.main_descr{
+  font-family: Inter Regular;
+  font-size: 14px;
+}
 p{
   margin: 0;
 }
@@ -320,5 +323,10 @@ p{
 .over_btn:hover {
   color: #FFFFFF;
   background: #0D42A8;
+}
+.news_img{
+  object-fit: cover;
+  max-width: 265px;
+  height: 465px;
 }
 </style>

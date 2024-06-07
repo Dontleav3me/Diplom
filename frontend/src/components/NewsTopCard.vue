@@ -54,7 +54,7 @@ p{
   border: 1px solid #000000A3;
 }
 .card_text{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 12px;
   font-weight: 400;
   line-height: 18px;
@@ -62,7 +62,7 @@ p{
   color: #000000CC;
 }
 .card_main_text{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
