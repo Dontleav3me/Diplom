@@ -46,7 +46,7 @@ p{
   background: #FFFBFB;
 }
 .news_text{
-  font-family: Inter;
+  font-family: Inter Regular;
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
