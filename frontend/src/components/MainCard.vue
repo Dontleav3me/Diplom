@@ -59,6 +59,7 @@ export default {
   align-items: center;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-family: Inter SemiBold;
 }
 .card_btn:hover {
   color: #FFFFFF;
