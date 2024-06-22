@@ -48,10 +48,10 @@ p {
   font-weight: 400;
   line-height: 71.68px;
   letter-spacing: -0.02em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
   margin-bottom: 110px;
-  max-width: 980px;
+  max-width: 850px;
 }
 .subhead {
   font-family: Inter SemiBold;
@@ -59,7 +59,7 @@ p {
   font-weight: 600;
   line-height: 29.05px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
   max-width: 650px;
   margin-bottom: 22px;
@@ -70,7 +70,7 @@ p {
   font-weight: 400;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
   max-width: 650px;
   margin-bottom: 60px;

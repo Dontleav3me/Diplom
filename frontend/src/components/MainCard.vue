@@ -32,7 +32,7 @@ export default {
   font-size: 24px;
   line-height: 29.05px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
 }
 .card_subtext {
@@ -40,7 +40,7 @@ export default {
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
 }
 .card_btn {

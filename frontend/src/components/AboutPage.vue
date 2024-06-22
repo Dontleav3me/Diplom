@@ -88,7 +88,7 @@ p{
   line-height: 21.78px;
   letter-spacing: -0.01em;
   color: #191819;
-  text-align: left;
+  text-align: justify;
 }
 .tale_main{
   display: flex;
@@ -109,7 +109,7 @@ p{
   line-height: 21.78px;
   letter-spacing: -0.01em;
   color: #191819;
-  text-align: left;
+  text-align: justify;
   max-width: 1200px;
   align-self: flex-start;
   margin-bottom: 20px;

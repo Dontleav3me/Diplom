@@ -50,7 +50,7 @@ p{
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #FFFBFB;
 }
 img{

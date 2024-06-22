@@ -69,7 +69,7 @@ export default {
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
   max-width: 500px;
 }
@@ -109,7 +109,7 @@ p{
   font-size: 16px;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   max-width: 420px;
   color: #191819;
 }

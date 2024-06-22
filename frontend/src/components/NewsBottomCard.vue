@@ -47,7 +47,7 @@ p{
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
-  text-align: left;
+  text-align: justify;
   color: #000000;
 }
 .news_subhead{
@@ -55,7 +55,7 @@ p{
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  text-align: left;
+  text-align: justify;
   color: #3D3D3D;
 }
 .card_text{

@@ -60,10 +60,10 @@ mounted(){
   font-size: 21px;
   line-height: 29.05px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
   max-width: 1200px;
-  margin-bottom: 35px;
+  margin-bottom: 50px;
 }
 p{
   margin: 0;

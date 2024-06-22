@@ -66,7 +66,7 @@ p{
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
-  text-align: left;
+  text-align: justify;
   color: #000000;
 }
 img{

@@ -137,7 +137,7 @@ mounted(){
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
-  text-align: left;
+  text-align: justify;
   color: #3D3D3D;
   max-width: 420px;
 }
