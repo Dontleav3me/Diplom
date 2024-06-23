@@ -10,14 +10,18 @@
       <p class="spectr_subtext">И приглашаем инвесторов к сотрудничеству! Вместе мы можем реализовать масштабные миссии в области социальной защиты и благотворительности.</p>
     </div>
     <div class="card_container">
-      <div class="wide_card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
-      <div class="card"></div>
+      <div class="card">
+        <a href="https://kamaflow.com/ru/" target="_blank">
+          <img src="../../static/img/kama_flow.jpg" alt="Kama Flow">
+        </a>
+      </div>
+      <div class="card">
+        <a href="https://www.ioffe.ru/ru/" target="_blank">
+          <img src="../../static/img/fti.jpg" alt="FTI">
+        </a>
+      </div>
     </div>
+    <button @click="this.$router.push('/contact')">Присоединиться к партнерству</button>
   </div>
 </template>
 
@@ -81,7 +85,7 @@ p {
   font-weight: 600;
   line-height: 29.05px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
 }
 .spectr_subtext {
@@ -90,7 +94,7 @@ p {
   font-weight: 400;
   line-height: 19.36px;
   letter-spacing: -0.01em;
-  text-align: left;
+  text-align: justify;
   color: #191819;
 }
 .text_container {
@@ -104,20 +108,42 @@ p {
 .card_container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1fr);
   gap: 45px;
   justify-content: center;
   align-self: center;
+  margin-bottom: 110px;
 }
 .card {
-  width: 240px;
-  height: 240px;
-  background: #0D42A8;
+  display: flex;
+  align-items: center;
+  width: 300px;
   border-radius: 5px;
+  border: 1px solid #0D42A8
 }
-.wide_card {
-  grid-column: span 2;
+button {  
+  border: 1px solid #0D42A8;
+  padding: 10px 120px;
+  color: #0D42A8;
+  font-family: Inter SemiBold;
+  font-size: 16px;
+  line-height: 19.36px;
+  text-align: center;
+  background: #FFFFFF;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease;  
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+button:hover {
+  color: #FFFFFF;
   background: #0D42A8;
-  border-radius: 5px;
+}
+.card img{
+  width: 100%;
+  cursor: pointer;
 }
 </style>

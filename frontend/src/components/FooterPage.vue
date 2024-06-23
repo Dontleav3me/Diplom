@@ -75,6 +75,7 @@ export default {
   font-size: 16px;
   text-align: left;
   font-family: Inter Medium;
+  cursor: pointer;
 }
 .footer_container{
   display: flex;

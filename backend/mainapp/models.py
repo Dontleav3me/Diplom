@@ -35,7 +35,6 @@ class SoloNews(models.Model):
     image = models.ImageField(upload_to='images/')
     head = models.CharField(max_length=256)
 
-
 class NewsTop(models.Model):
     image = models.ImageField(upload_to='images/')
     head = models.CharField(max_length=256)
