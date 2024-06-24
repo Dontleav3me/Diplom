@@ -8,13 +8,6 @@ class Directions(models.Model):
     name = models.CharField(max_length=256)
     image = models.ImageField(upload_to='images/')
 
-class News(models.Model):
-    head = models.CharField(max_length=128)
-    date = models.CharField(max_length=25)
-    name = models.CharField(max_length=200)
-    dela = models.CharField(max_length=50)
-    time = models.CharField(max_length=50)
-
 class BottomNews(models.Model):
     name = models.CharField(max_length=256)
     subname = models.CharField(max_length=256)
@@ -45,7 +38,6 @@ class NewsTop(models.Model):
 
 admin.site.register(project)
 admin.site.register(Directions)
-admin.site.register(News)
 admin.site.register(BottomNews)
 admin.site.register(MiniNew)
 admin.site.register(SoloNews)

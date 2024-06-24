@@ -18,7 +18,7 @@ export default {
   components: { TrendsCard},
   data() {
     return {
-      directions: [{ name: 'Культура и искусство',img: '../../static/img/culture.svg' }]
+      directions: []
 
     }
   },

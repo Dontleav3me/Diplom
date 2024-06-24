@@ -2,9 +2,9 @@ from django.shortcuts import render
 from mainapp.models import *
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from .models import project, Directions, News, BottomNews, MiniNew, SoloNews
+from .models import project, Directions, BottomNews, MiniNew, SoloNews
 from .serializers import (
-    ProjectSerializer, DirectionsSerializer, NewsSerializer, 
+    ProjectSerializer, DirectionsSerializer,
     BottomNewsSerializer, MiniNewSerializer, SoloNewsSerializer, NewsTopSerializer
 )
 from django.views.decorators.csrf import csrf_exempt
@@ -19,12 +19,6 @@ def get_projects(request):
 def get_directions(request):
     directions = Directions.objects.all()
     serializer = DirectionsSerializer(directions, many=True)
-    return Response(serializer.data)
-@csrf_exempt
-@api_view(['GET'])
-def get_news(request):
-    news = News.objects.all()
-    serializer = NewsSerializer(news, many=True)
     return Response(serializer.data)
 @csrf_exempt
 @api_view(['GET'])
