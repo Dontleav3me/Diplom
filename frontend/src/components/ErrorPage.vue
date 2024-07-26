@@ -89,4 +89,44 @@ p{
 .cursor:hover{
   color: #0D42A8;
 }
+@media (max-width: 797px) {
+  .main { 
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main_text{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 28px;
+    line-height: 48.4px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .main_subtext{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 48.4px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .back{
+    font-family: Inter SemiBold;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    padding: 15px 20px;
+  }
+  .main_descr{
+    font-size: 10px;
+    line-height: 21px;
+    text-align: left;
+  }
+}
 </style>

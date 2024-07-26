@@ -44,6 +44,7 @@ p{
   width: 50px;
   height: 50px;
   background: #FFFBFB;
+  border-radius: 5px;
 }
 .news_text{
   font-family: Inter Regular;
@@ -55,6 +56,12 @@ p{
 }
 img{
   width: 24px;
-  height: 20px;
+  height: 24px;
+  border-radius: 3px;
+}
+@media (max-width: 797px) {
+  .news_text{
+    font-size: 14px;
+  }
 }
 </style>

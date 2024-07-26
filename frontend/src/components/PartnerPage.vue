@@ -146,4 +146,75 @@ button:hover {
   width: 100%;
   cursor: pointer;
 }
+@media (max-width: 797px) {
+  .main { 
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .head{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .subhead{
+    font-family: Inter SemiBold;
+    font-size: 14px;
+    line-height: 16.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    max-width: 360px;
+  }
+  .descr{
+    font-family: Inter Regular;
+    font-size: 12px;
+    line-height: 16.1px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    max-width: 300px;
+    margin-bottom: 30px;
+  }
+  .spectr_text{
+    font-family: Inter SemiBold;
+    font-size: 14px;
+    line-height: 16.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .spectr_subtext{
+    font-family: Inter Regular;
+    font-size: 12px;
+    line-height: 16.1px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .text_container{
+    max-width: 320px;
+    margin-bottom: 30px;
+  }
+  .card_container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1fr);
+    gap: 45px;
+    justify-content: center;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+  button{
+    font-family: Inter SemiBold;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    padding: 15px 32px;
+    width: auto;
+  }
+}
 </style>

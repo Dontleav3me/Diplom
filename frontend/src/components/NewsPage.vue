@@ -15,7 +15,7 @@
         </div>
         <img :src="img" alt="" class="news_img">
       </div>
-      <div class="wrapper">
+      <div class="wrapper pc">
         <NewsTopCard v-for="(NewsTop, index) in NewsTops" :key="index" :NewsTop="NewsTop"></NewsTopCard>
       </div>
     </div>
@@ -193,7 +193,7 @@ img{
   font-size: 20px;
   font-weight: 400;
   line-height: 26px;
-  text-align: left;
+  text-align: justify;
   color: #000000;
 }
 .main_descr{
@@ -328,5 +328,63 @@ p{
   object-fit: cover;
   max-width: 265px;
   height: 465px;
+}
+.mobile{
+  display: none;
+}
+@media (max-width: 797px) {
+  .head{
+    margin: 0;
+  }
+  .main { 
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pc{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .news_wrapper{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    gap: 50px;
+    margin-bottom: 65px;
+  }
+  .main_text{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 32.4px;
+    letter-spacing: -0.02em;
+    text-align: justify;
+    margin-bottom: 0;
+  }
+  .news_img{
+    width: 100px;
+    height: auto;
+  }
+  .divider{
+    margin: 20px 0;
+  }
+  .descr{
+    margin-top: 10px;
+  }
+  .main_descr{
+    font-family: Inter Regular;
+    font-size: 10px;
+  }
+  .news_head{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
 }
 </style>

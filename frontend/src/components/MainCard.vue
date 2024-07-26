@@ -68,4 +68,31 @@ export default {
 p{
   margin: 0;
 }
+@media (max-width: 797px) {
+  .card_text{
+    font-family: Inter Medium;
+    font-size: 16px;
+    line-height: 14.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .card_subtext{
+    font-family: Inter Regular;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .card_btn{
+    font-family: Inter SemiBold;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 14.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .card{
+    padding: 20px;
+  }
+}
 </style>

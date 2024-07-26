@@ -74,4 +74,17 @@ img{
   height: 118px;
   border-radius: 5px;
 }
+@media (max-width: 797px) {
+  .card_text{
+    font-family: Athelas;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 71.68px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color: #191819;
+    display: flex;
+    align-self: flex-start;
+  }
+}
 </style>

@@ -96,4 +96,44 @@ p{
   grid-template-rows: 1fr;
   gap: 60px;
 }
+@media (max-width: 797px) {
+  .main { 
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .mission{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .main_text{
+    font-family: Inter Regular;
+    font-size: 12px;
+    line-height: 16.1px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .trends{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .main_container{
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    gap: 60px;
+  }
+}
 </style>

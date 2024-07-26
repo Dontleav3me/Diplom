@@ -196,5 +196,76 @@ video {
   gap: 20px;
 }
 
-
+@media (max-width: 797px) {
+  .header{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 20px;
+    line-height: 22.4px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .head_btn{
+    width: 65%;
+  }
+  .subheader{
+    font-family: Inter Regular;
+    font-size: 14px;
+    line-height: 18.1px;
+    letter-spacing: -0.01em;
+    text-align: center;
+  }
+  .main{
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project_content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+    align-self: flex-start;
+  }
+  .news_container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 20px;
+  }
+  .project{
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 17.92px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  .proekt_text{
+    font-family: Inter Regular;
+    font-size: 12px;
+    line-height: 12.1px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .proekt_content{
+    max-width: 300px;
+  }
+  .divider_proekt{
+    max-width: 300px;
+  }
+  .news{
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 17.92px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+}
 </style>

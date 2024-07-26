@@ -69,4 +69,20 @@ img{
 p{
   margin: 0;
 }
+@media (max-width: 797px) {
+  .card_text{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  img{
+    border-radius: 5px;
+    width: 350px;
+    height: 200px;
+  }
+}
 </style>

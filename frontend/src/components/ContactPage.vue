@@ -4,6 +4,15 @@
       <p class="contact_text">Наши контакты</p>
       <p class="contact_subtext">Рады предоставить дополнительную информацию о работе МБОФ им. А. Невского и ответить на ваши вопросы. Для публикации в СМИ или для приглашения команды фонда на мероприятия пишите ппо контактам указанным для СМИ </p>
     </div>
+    <div class="proekt_container mobile">
+      <div class="proekt_content">
+        <p class="proekt_text">
+          Мы находимся здесь, чтобы помочь тем, кто оказался в тяжелой ситуации поддерживая как материально, так и духовно.
+        </p>
+        <img src="../../static/img/mailing.svg" alt="">
+      </div>
+      <div class="divider_proekt"></div>
+    </div>
     <div class="info_container">
       <div class="info_wrapper">
         <div class="info">
@@ -19,7 +28,7 @@
           <p class="info_text">Адрес: 197198, Россия, Санкт – Петербург,<br> ул. Съзжинская дом.22</p>
         </div>
       </div>
-      <div class="proekt_container">
+      <div class="proekt_container pc">
         <div class="proekt_content">
           <p class="proekt_text">
             Мы находимся здесь, чтобы помочь тем, кто оказался в тяжелой ситуации поддерживая как материально, так и духовно.
@@ -36,9 +45,16 @@
         <p class="bottom_text">Вконтакте</p>
         <p class="bottom_text">Youtube</p>
       </div>
-      <div class="bottom_right">
+      <div class="bottom_right pc">
         <p class="bottom_text">@alekseypak</p>
       </div>
+    </div>
+    <p class="bottom_text_info mobile">Рады предоставить дополнительную информацию о работе МБОФ им. А. Невского и ответить на ваши вопросы. Для публикации в СМИ или для приглашения команды фонда на мероприятия пишите по контактам указанным для СМИ </p>
+    <div class="niz mobile">
+      <div class="bottom_right mobile">
+        <p class="bottom_text">@alekseypak</p>
+      </div>
+      <p class="bottom_text_black">Контакты для СМИ</p>
     </div>
   </div>
 </template>
@@ -164,5 +180,97 @@ p{
   text-align: left;
   color: #0D42A8;
   cursor: pointer;
+}
+.mobile{
+  display: none;
+}
+@media (max-width: 797px) {
+  .head{
+    margin: 0;
+  }
+  .main { 
+    margin: 30px 15px 20px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .contact_text{
+    max-width: 500px;
+    font-family: Athelas;
+    font-size: 24px;
+    line-height: 24.4px;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  .contact_subtext{
+    display: none;
+  }
+  .mobile{
+    display: block;
+  }
+  .pc{
+    display: none;
+  }
+  .info_text{
+    font-family: Inter SemiBold;
+    font-size: 12px;
+    line-height: 14.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .bottom_text{
+    font-family: Inter SemiBold;
+    font-size: 14px;
+    line-height: 16.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+  }
+  .niz{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  .bottom_text_black{
+    font-family: Inter Medium;
+    font-size: 14px;
+    line-height: 16.52px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    color: #191819;
+  }
+  .bottom_text_info{
+    font-family: Inter Medium;
+    font-size: 14px;
+    line-height: 16.68px;
+    letter-spacing: -0.01em;
+    text-align: justify;
+    color: #191819;
+    margin-bottom: 30px;
+  }
+  .bottom_left{
+    margin-bottom: 30px;
+  }
+  .info_container{
+    margin-bottom: 30px;
+  }
+  .proekt_text{
+    font-family: Inter Medium;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16.1px;
+    letter-spacing: -0.01em;
+    text-align: left;
+
+  }
+  .proekt_container {
+    max-width: 350px;
+    align-self: flex-end;
+  }
+  .divider_proekt{
+    width: auto;
+  }
 }
 </style>

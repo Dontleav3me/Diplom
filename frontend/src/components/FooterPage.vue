@@ -39,6 +39,13 @@
         <div class="divider"></div>
       </div>
     </div>
+    <div class="mailing_mobile">
+      <div class="mailing_container">
+        <p class="mailing_text">Подписаться на рассылку</p>
+        <img src="../../static/img/mailing.svg" alt="">
+      </div>
+      <div class="divider otrez"></div>
+    </div>
     <div class="footer_bottom">
       <div class="divider"></div>
       <div class="footer_wrapper">
@@ -146,5 +153,58 @@ p{
 .bottom_right{
   display: flex;
   gap: 35px;
+}
+.mailing_mobile{
+  display: none;
+}
+@media (max-width: 797px) {
+  .buttons{
+    gap: 50px;
+  }
+  .buttons_text{
+    font-family: Inter Medium;
+    font-size: 12px;
+    line-height: 12.1px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .buttons_subtext{
+    font-family: Inter Medium;
+    font-size: 10px;
+    line-height: 9.68px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+  .footer{
+    margin: 60px 0 30px 0;
+    gap: 30px;
+  }
+  .mailing{
+    display: none;
+  }
+  .mailing_mobile{
+    display: block;
+    max-width: 242px;
+  }
+  .footer_container{
+    justify-content: center;
+    margin: 0 20px;
+  }
+  .mailing_container{
+    margin-left: 10px;
+    gap: 10px;
+    align-items: center;
+  }
+  .otrez{
+    margin-top: 10px;
+    max-width: auto;
+    margin-left: 10px;
+  }
+  .bottom_right{
+    display: none;
+  }
+  .bottom_text{
+    margin-left: 10px;
+  }
 }
 </style>
