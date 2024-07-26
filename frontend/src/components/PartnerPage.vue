@@ -103,7 +103,7 @@ p {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 190px;
+  margin-bottom: 100px;
 }
 .card_container {
   display: grid;

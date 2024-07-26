@@ -279,6 +279,10 @@ p {
     position: absolute;
     top: 10px;
     right: 10px;
+    transition: all 0.2s ease;
+  }
+  .close_btn:hover{
+    color: #0D42A8;
   }
   
   html.no-scroll,
@@ -333,6 +337,12 @@ p {
     border-bottom: 1px solid rgba(13, 66, 168, 1); 
     width: auto;
     margin-bottom: 50px;
+  }
+  a{
+    transition: all 0.2s ease;
+  }
+  a:hover{
+    color: #0D42A8;
   }
 }
 </style>
