@@ -176,7 +176,7 @@ p {
   display: none;
 }
 
-@media (max-width: 548px) {
+@media (max-width: 797px) {
   .nav {
     display: none;
   }
