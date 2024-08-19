@@ -1,13 +1,13 @@
 <template>
   <div class="header_card">
-    <img :src="image" alt="">
+    <img :src="image" alt="" @click="this.$router.push('/item')">
     <div class="header_card_container">
       <div class="card_head">
         <p class="card_text">{{ NewsTop.head }}</p>
         <div class="divider_card"></div>
         <p class="card_text">{{ NewsTop.date }}</p>
       </div>
-      <p class="card_main_text">{{ NewsTop.name }}</p>
+      <p class="card_main_text" @click="this.$router.push('/item')">{{ NewsTop.name }}</p>
       <div class="card_head">
         <p class="card_text">{{ NewsTop.dela }}</p>
         <div class="divider_card"></div>
@@ -68,11 +68,17 @@ p{
   line-height: 26px;
   text-align: justify;
   color: #000000;
+  transition: all 0.3s ease;
 }
 img{
   width: 114px;
   height: 118px;
   border-radius: 5px;
+  cursor: pointer;
+}
+.card_main_text:hover{
+  color: #0D42A8;
+  cursor: pointer;
 }
 @media (max-width: 797px) {
   .card_text{

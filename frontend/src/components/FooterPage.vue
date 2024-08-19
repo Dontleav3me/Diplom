@@ -15,7 +15,7 @@
           <p class="buttons_text">Сотрудничество</p>
           <div class="submenu">
             <p class="buttons_subtext" @click="this.$router.push('/partner')">Партнёрство</p>
-            <p class="buttons_subtext">Вакансии</p>
+            <p class="buttons_subtext" @click="this.$router.push('/contact')">Вакансии</p>
             <p class="buttons_subtext" @click="this.$router.push('/contact')">Контакты</p>
             <p class="buttons_subtext">Награды</p>
           </div>

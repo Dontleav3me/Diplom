@@ -3,8 +3,8 @@
     <div class="header">
       <div class="header_container">
         <div class="header_text">
-          <p class="main_text">{{ name }}</p>
-          <p class="main_subtext">{{ subname }}</p>
+          <p class="main_text" @click="this.$router.push('/item')">{{ name }}</p>
+          <p class="main_subtext" @click="this.$router.push('/item')">{{ subname }}</p>
           <div class="descr">
             <p class="main_descr">{{ dela }}</p>
             <div class="divider_height"></div>
@@ -13,7 +13,7 @@
             <p class="main_descr">{{ date }}</p>
           </div>
         </div>
-        <img :src="img" alt="" class="news_img">
+        <img :src="img" alt="" class="news_img" @click="this.$router.push('/item')">
       </div>
       <div class="wrapper pc">
         <NewsTopCard v-for="(NewsTop, index) in NewsTops" :key="index" :NewsTop="NewsTop"></NewsTopCard>
@@ -131,6 +131,15 @@ mounted(){
   text-align: left;
   color: #000000;
   max-width: 450px;
+  transition: all 0.3s ease;
+}
+.main_text:hover{
+  color: #0D42A8;
+  cursor: pointer;
+}
+.main_subtext:hover{
+  color: #0D42A8;
+  cursor: pointer;
 }
 .main_subtext{
   font-family: Inter Regular;
@@ -140,6 +149,7 @@ mounted(){
   text-align: justify;
   color: #3D3D3D;
   max-width: 420px;
+  transition: all 0.3s ease;
 }
 .header_text{
   display: flex;
@@ -153,6 +163,7 @@ mounted(){
 }
 img{
   border-radius: 5px;
+  cursor: pointer;
 }
 .descr{
   margin-top: 160px;

@@ -1,27 +1,29 @@
 <template>
-  <div class="main">
-    <div class="wrapper">
-      <p class="head">Мы открыты ко всему новому и будем рады сотрудничеству</p>
-      <p class="subhead">Наши партнеры играют ключевую роль в реализации проектов и предоставлении помощи населению</p>
-      <p class="descr">Мы взаимодействуем с партнерами не только на коммерческой основе, но и в рамках взаимного усиления в продвижении инициатив и поддержки социальных проектов</p>
-    </div>
-    <div class="text_container">
-      <p class="spectr_text">Мы развиваем широкий спектр проектов</p>
-      <p class="spectr_subtext">И приглашаем инвесторов к сотрудничеству! Вместе мы можем реализовать масштабные миссии в области социальной защиты и благотворительности.</p>
-    </div>
-    <div class="card_container">
-      <div class="card">
-        <a href="https://kamaflow.com/ru/" target="_blank">
-          <img src="../../static/img/kama_flow.jpg" alt="Kama Flow">
-        </a>
+  <div class="bg">
+    <div class="main">
+      <div class="wrapper">
+        <p class="head">Мы открыты ко всему новому и будем рады сотрудничеству</p>
+        <p class="subhead">Наши партнеры играют ключевую роль в реализации проектов и предоставлении помощи населению</p>
+        <p class="descr">Мы взаимодействуем с партнерами не только на коммерческой основе, но и в рамках взаимного усиления в продвижении инициатив и поддержки социальных проектов</p>
       </div>
-      <div class="card">
-        <a href="https://www.ioffe.ru/ru/" target="_blank">
-          <img src="../../static/img/fti.jpg" alt="FTI">
-        </a>
+      <div class="text_container">
+        <p class="spectr_text">Мы развиваем широкий спектр проектов</p>
+        <p class="spectr_subtext">И приглашаем инвесторов к сотрудничеству! Вместе мы можем реализовать масштабные миссии в области социальной защиты и благотворительности.</p>
       </div>
+      <div class="card_container">
+        <div class="card">
+          <a href="https://kamaflow.com/ru/" target="_blank">
+            <img src="../../static/img/kama_flow.jpg" alt="Kama Flow">
+          </a>
+        </div>
+        <div class="card">
+          <a href="https://www.ioffe.ru/ru/" target="_blank">
+            <img src="../../static/img/fti.jpg" alt="FTI">
+          </a>
+        </div>
+      </div>
+      <button @click="this.$router.push('/contact')">Присоединиться к партнерству</button>
     </div>
-    <button @click="this.$router.push('/contact')">Присоединиться к партнерству</button>
   </div>
 </template>
 
@@ -37,11 +39,24 @@ export default {
   flex-direction: column;
   align-self: flex-start;
 }
+.bg{
+  position: relative;
+  z-index: 1;
+  background: 
+    url(../../static/img/Vector.png) no-repeat,
+    url(../../static/img/Vector1.png) no-repeat;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 450px, 100% 500px;
+  background-position: top left, bottom left;
+}
 .main {
+  position: relative;
   margin: 30px 125px 20px 125px;
   display: flex;
   flex-direction: column;
   align-items: left;
+  z-index: 2;
 }
 p {
   margin: 0;
@@ -119,7 +134,8 @@ p {
   align-items: center;
   width: 300px;
   border-radius: 5px;
-  border: 1px solid #0D42A8
+  border: 1px solid #0D42A8;
+  background: white;
 }
 button {  
   border: 1px solid #0D42A8;

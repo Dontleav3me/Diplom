@@ -1,29 +1,31 @@
 <template>
-  <div class="main">
-    <p class="header">Межрегиональный Благотворительный Общественный Фонд Социальной Защиты Населения Имени Александра Невского</p>
-    <button class="head_btn" @click="this.$router.push('/trends')">Направления и развития</button>
-    <div class="divider"></div>
-    <p class="subheader">Фонд помощи ветеранам, инвалидам правоохранительных органов и их семей, относящимся в то время практически к малоимущим слоям населения</p>
-    <div class="proekt_container">
-      <div class="proekt_content">
-        <p class="proekt_text">
-          Каждый день, мы развиваем разные проекты от поддержки малоимущих семей, до духовного просвещения граждан и восстановлению инфраструктуры на новых территориях 
-        </p>
-        <img src="../../static/img/mailing.svg" alt="">
+  <div class="bg">
+    <div class="main">
+      <p class="header">Межрегиональный Благотворительный Общественный Фонд Социальной Защиты Населения Имени Александра Невского</p>
+      <button class="head_btn" @click="this.$router.push('/trends')">Направления и развития</button>
+      <div class="divider"></div>
+      <p class="subheader">Фонд помощи ветеранам, инвалидам правоохранительных органов и их семей, относящимся в то время практически к малоимущим слоям населения</p>
+      <div class="proekt_container">
+        <div class="proekt_content">
+          <p class="proekt_text">
+            Каждый день, мы развиваем разные проекты от поддержки малоимущих семей, до духовного просвещения граждан и восстановлению инфраструктуры на новых территориях 
+          </p>
+          <img src="../../static/img/mailing.svg" alt="">
+        </div>
+        <div class="divider_proekt"></div>
       </div>
-      <div class="divider_proekt"></div>
-    </div>
-    <div class="project_container">
-      <p class="project">Наши действующие проекты</p>
-    </div>
-    <div class="project_content">
-      <MainCard v-for="(project, index) in projects" :key="index" :project="project"></MainCard>
-    </div>
-    <div class="news_container">
-      <p class="news">Последние новости</p>
-    </div>
-    <div class="news_container">
-      <MainNewsCard v-for="(mininew, index) in mininews" :key="index" :mininew="mininew"></MainNewsCard>
+      <div class="project_container">
+        <p class="project">Наши действующие проекты</p>
+      </div>
+      <div class="project_content">
+        <MainCard v-for="(project, index) in projects" :key="index" :project="project"></MainCard>
+      </div>
+      <div class="news_container">
+        <p class="news">Последние новости</p>
+      </div>
+      <div class="news_container">
+        <MainNewsCard v-for="(mininew, index) in mininews" :key="index" :mininew="mininew"></MainNewsCard>
+      </div>
     </div>
   </div>
 </template>
@@ -68,6 +70,17 @@ async mounted(){
 </script>
 
 <style scoped> 
+.bg{
+  position: relative;
+  z-index: 1;
+  background: 
+    url(../../static/img/head_stripe_blue.png) no-repeat,
+    url(../../static/img/head_stripe_red.png) no-repeat;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: 100% 450px, 100% 500px;
+  background-position: top left, top left;
+}
 .main {
   margin: 30px 125px 20px 125px;
   display: flex;
@@ -93,7 +106,6 @@ p {
   font-size: 16px;
   line-height: 19.36px;
   text-align: left;
-  background: #FFFFFF;
   border-radius: 3px;
   display: flex;
   justify-content: center;
@@ -101,6 +113,7 @@ p {
   cursor: pointer;
   transition: all 0.3s ease;
   margin-bottom: 80px;
+  background: none;
 }
 .head_btn:hover {
   color: #FFFFFF;
@@ -267,5 +280,18 @@ video {
     text-align: justify;
     margin-bottom: 30px;
   }
+  .bg{
+    position: relative;
+    z-index: 1;
+    object-fit: cover;
+    background-position: top left, top left, top left;
+    background: 
+    url(../../static/img/mobile_level_1.png) no-repeat,
+    url(../../static/img/mobile_level_2.png) no-repeat,
+    url(../../static/img/mobile_level_3.png) no-repeat;
+    background-size: 100% 450px, 100% 450px, 100% 500px;
+    background-repeat: no-repeat;
+  }
+  
 }
 </style>

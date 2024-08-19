@@ -1,5 +1,5 @@
 <template>
-  <div class="news_card">
+  <div class="news_card" @click="this.$router.push('/item')">
     <img :src="image" alt="">
     <div class="news_container">
       <p class="news_heads">{{ NewsBottom.name }}</p>
@@ -36,6 +36,7 @@ p{
   flex-direction: column;
   gap: 15px;
   max-width: 320px;
+  cursor: pointer;
 }
 .news_container{
   display: flex;
@@ -49,6 +50,15 @@ p{
   line-height: 26px;
   text-align: justify;
   color: #000000;
+  transition: all 0.3s ease;
+}
+.news_heads:hover{
+  color: #0D42A8;
+  cursor: pointer;
+}
+.news_subhead:hover{
+  color: #0D42A8;
+  cursor: pointer;
 }
 .news_subhead{
   font-family: Inter Regular;
@@ -57,6 +67,7 @@ p{
   line-height: 22px;
   text-align: justify;
   color: #3D3D3D;
+  transition: all 0.3s ease;
 }
 .card_text{
   font-family: Inter Regular;

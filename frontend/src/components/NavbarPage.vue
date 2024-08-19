@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="z-index">
 
     <div class="nav">
       <router-link to="/about" style="text-decoration: none;">
@@ -174,6 +174,10 @@ p {
 }
 .nav_mobile{
   display: none;
+}
+.z-index{
+  position: relative;
+  z-index: 99;
 }
 
 @media (max-width: 797px) {
