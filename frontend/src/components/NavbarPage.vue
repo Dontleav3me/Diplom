@@ -20,7 +20,7 @@
           <p class="nav_text">Направления развития</p>
         </div>
       </router-link>
-      <div class="nav_container">
+      <div class="nav_container_img">
         <img src="../../static/img/logo.svg" alt="" draggable="false"
         @click="resetMenuItem">
       </div>
@@ -136,6 +136,12 @@ export default {
 
 <style scoped>
 .nav_container {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.nav_container_img {
   cursor: pointer;
   user-select: none;
   position: relative;
