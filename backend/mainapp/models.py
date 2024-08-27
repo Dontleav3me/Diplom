@@ -6,6 +6,7 @@ class project(models.Model):
 
 class Directions(models.Model):
     name = models.CharField(max_length=256)
+    subname = models.CharField(max_length=128)
     image = models.ImageField(upload_to='images/')
 
 class BottomNews(models.Model):
@@ -27,7 +28,13 @@ class SoloNews(models.Model):
     date = models.CharField(max_length=256)
     image = models.ImageField(upload_to='images/')
     head = models.CharField(max_length=256)
+    header_items = models.CharField(max_length=256)
+    name_items = models.CharField(max_length=256)
+    subname_items = models.CharField(max_length=256)
+    img_mobile = models.ImageField(upload_to='images/')
+    img_items = models.ImageField(upload_to='images/')
 
+    
 class NewsTop(models.Model):
     image = models.ImageField(upload_to='images/')
     head = models.CharField(max_length=256)

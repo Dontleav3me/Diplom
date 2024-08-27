@@ -45,6 +45,14 @@ const routes = [
     name: 'NewsItem',
     component: NewsItemPage
   },
+/*   {
+    path: '/item/:userId',
+    name: 'NewsItem',
+    props: route => ({
+      userId: route.params.userId,
+    }),
+    component: NewsItemPage
+  }, */
   {
     path: '/error',
     name: 'error',

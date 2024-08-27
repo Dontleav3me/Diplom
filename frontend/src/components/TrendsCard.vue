@@ -98,8 +98,6 @@ img {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   width: 495px;
   height: 265px;
   background-color: #4386C4;

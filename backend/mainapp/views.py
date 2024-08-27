@@ -44,3 +44,10 @@ def get_newstop(request):
     solo_news = NewsTop.objects.all()
     serializer = NewsTopSerializer(solo_news, many=True)
     return Response(serializer.data)
+@api_view(['GET'])
+def get_item(request):
+    user_id = request.query_params.get('user_id')
+    #user = TelegramUser.objects.get(user_id = user_id)
+    #serializer = TelegramUserSerializer(user)
+    #return Response(serializer.data, status=status.HTTP_200_OK)
+    return Response("")

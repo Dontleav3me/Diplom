@@ -1,61 +1,45 @@
-"use strict";
-
 import axios from "axios";
-
-// Full config:  https://github.com/axios/axios#request-config
-// axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
-// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
-// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+import Cookies from 'js-cookie'; // Подключаем библиотеку для работы с куками
 
 let config = {
-  // baseURL: process.env.baseURL || process.env.apiUrl || ""
-  // timeout: 60 * 1000, // Timeout
-  // withCredentials: true, // Check cross-site Access-Control
+  baseURL: 'http://127.0.0.1:8000/', // Укажите правильный базовый URL вашего API
+  withCredentials: true, // Включаем отправку кук в запросе
 };
 
 const _axios = axios.create(config);
 
 _axios.interceptors.request.use(
   function(config) {
-    // Do something before request is sent
+    // Получаем CSRF токен из кук
+    const csrfToken = Cookies.get('csrftoken');
+    if (csrfToken) {
+      // Добавляем CSRF токен в заголовок запроса
+      config.headers['X-CSRFToken'] = csrfToken;
+    }
+    // Устанавливаем заголовок Access-Control-Allow-Credentials в true
+    config.withCredentials = true;
     return config;
   },
   function(error) {
-    // Do something with request error
     return Promise.reject(error);
   }
 );
 
-// Add a response interceptor
+// Добавляем ответный перехватчик
 _axios.interceptors.response.use(
   function(response) {
-    // Do something with response data
     return response;
   },
   function(error) {
-    // Do something with response error
     return Promise.reject(error);
   }
 );
 
-Plugin.install = function(Vue, options) {
-  console.log(options)
-  Vue.axios = _axios;
-  window.axios = _axios;
-  Object.defineProperties(Vue.prototype, {
-    axios: {
-      get() {
-        return _axios;
-      }
-    },
-    $axios: {
-      get() {
-        return _axios;
-      }
-    },
-  });
+const Plugin = {};
+
+Plugin.install = function(app) {
+  app.config.globalProperties.axios = _axios;
+  app.config.globalProperties.$axios = _axios;
 };
-
-
 
 export default Plugin;

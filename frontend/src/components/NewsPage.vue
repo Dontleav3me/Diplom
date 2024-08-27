@@ -2,9 +2,9 @@
   <div class="main">
     <div class="header">
       <div class="header_container">
-        <div class="header_text">
-          <p class="main_text" @click="this.$router.push('/item')">{{ name }}</p>
-          <p class="main_subtext" @click="this.$router.push('/item')">{{ subname }}</p>
+        <div class="header_text" @click="this.$router.push('/item')">
+          <p class="main_text">{{ name }}</p>
+          <p class="main_subtext">{{ subname }}</p>
           <div class="descr">
             <p class="main_descr">{{ dela }}</p>
             <div class="divider_height"></div>
