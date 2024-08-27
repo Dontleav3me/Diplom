@@ -96,6 +96,8 @@ img {
 
 .details_container {
   position: relative;
+  word-wrap: break-word;
+  white-space: normal;
   display: flex;
   flex-direction: column;
   width: 495px;
