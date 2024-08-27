@@ -7,7 +7,7 @@
         <button @click="toggleDetails" class="img_btn">Подробнее</button>
       </div>
       <div v-else class="details_container" key="details">
-        <p class="card_text_flipped">Данное направление ориентировано на сохранение и пополнение фонда национального достояния, а также укрепление культурной идентичности нашей страны в условиях нового многополярного мира. Поддержка программ с применением передовых мировых практик и содействие в развитии современных форм искусства в сочетании с уникальным историческим наследием многонациональной России.</p>
+        <p class="card_text_flipped">{{ direction.subname }}</p>
         <button @click="toggleDetails" class="back_btn">Назад</button>
       </div>
     </transition>
