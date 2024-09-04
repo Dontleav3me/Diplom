@@ -19,7 +19,6 @@ export default {
       this.$router.push({ 
         name: 'ProjectDetailPage', 
         params: { id: this.project.id }, 
-        query: { type: 'project' }
       });
     }
   }

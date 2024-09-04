@@ -27,37 +27,24 @@ export default {
         }
     },
     mounted() {
-      const type = this.$route.query.type;
-      console.log("Mounted with ID:", this.id);
-      console.log("Mounted with Type:", type);
-      this.fetchDetail(type);
-    },
-    methods: {
-      async fetchDetail(type) {
-        let endpoint = '';
-        switch(type) {
-            case 'project':
-                endpoint = `http://127.0.0.1:8000/api/project_detail/${this.id}/`;
-                break;
-            default:
-                console.error('Unknown detail type');
-                return;
-        }
+    this.fetchNewsDetail();
+  },
+  methods: {
+    async fetchNewsDetail() {
+      try {
+        const response = await axios.get(`http://127.0.0.1:8000/api/project_detail/${this.id}/`);
+        const newsItem = response.data;
 
-        try {
-            const response = await axios.get(endpoint);
-            const item = response.data;
-
-            this.header_items = item.header_items;
-            this.name_items = item.name_items;
-            this.subname_items = item.subname_items;
-            this.img_mobile = 'http://127.0.0.1:8000' + item.img_mobile;
-            this.img_items = 'http://127.0.0.1:8000' + item.img_items;
-        } catch (error) {
-            console.error('Error fetching details:', error);
-        }
+        this.header_items = newsItem.header_items;
+        this.name_items = newsItem.name_items;
+        this.subname_items = newsItem.subname_items;
+        this.img_mobile = 'http://127.0.0.1:8000' + newsItem.img_mobile;
+        this.img_items = 'http://127.0.0.1:8000' + newsItem.img_items;
+      } catch (error) {
+        console.error('Error fetching news details:', error);
+      }
     }
-  }
+  },
 }
 </script>
 
