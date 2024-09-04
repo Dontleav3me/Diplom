@@ -30,11 +30,7 @@ export default {
   },
   methods: {
     goToDetailPage() {
-      this.$router.push({ 
-        name: 'NewsDetailPage', 
-        params: { id: this.NewsTop.id }, 
-        query: { type: 'news_top' }
-      });
+      this.$router.push({ name: 'NewsDetailPage', params: { id: this.NewsTop.id } });
     }
   }
 }

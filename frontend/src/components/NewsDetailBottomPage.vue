@@ -32,7 +32,7 @@ export default {
   methods: {
     async fetchNewsDetail() {
       try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/news_top_detail/${this.id}/`);
+        const response = await axios.get(`http://127.0.0.1:8000/api/bottom_news_detail/${this.id}/`);
         const newsItem = response.data;
 
         this.header_items = newsItem.header_items;

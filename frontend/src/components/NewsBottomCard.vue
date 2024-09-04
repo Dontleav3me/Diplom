@@ -27,9 +27,8 @@ export default {
   methods: {
     goToDetailPage() {
       this.$router.push({ 
-        name: 'NewsDetailPage', 
+        name: 'NewsDetailBottomPage', 
         params: { id: this.NewsBottom.id }, 
-        query: { type: 'bottom_news' }
       });
     }
   }

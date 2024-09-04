@@ -9,6 +9,7 @@ import ErrorPage from '../components/ErrorPage.vue'
 import NewsItemPage from '../components/NewsItemPage.vue'
 import NewsDetailPage from '../components/NewsDetailPage.vue'
 import ProjectDetailPage  from '../components/ProjectDetailPage.vue'
+import NewsDetailBottomPage  from '../components/NewsDetailBottomPage.vue'
 
 
 const routes = [
@@ -59,7 +60,13 @@ const routes = [
     path: '/news/:id',
     name: 'NewsDetailPage',
     component: NewsDetailPage,
-    props: route => ({ id: route.params.id, type: route.query.type })
+    props: true
+  },
+  {
+    path: '/news/:id',
+    name: 'NewsDetailBottomPage',
+    component: NewsDetailBottomPage,
+    props: true
   },
   {
     path: '/project/:id',
