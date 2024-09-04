@@ -7,6 +7,8 @@ import NewsPage from '../components/NewsPage.vue'
 import ContactPage from '../components/ContactPage.vue'
 import ErrorPage from '../components/ErrorPage.vue'
 import NewsItemPage from '../components/NewsItemPage.vue'
+import NewsDetailPage from '../components/NewsDetailPage.vue'
+import ProjectDetailPage  from '../components/ProjectDetailPage.vue'
 
 
 const routes = [
@@ -53,6 +55,18 @@ const routes = [
     }),
     component: NewsItemPage
   }, */
+  {
+    path: '/news/:id',
+    name: 'NewsDetailPage',
+    component: NewsDetailPage,
+    props: route => ({ id: route.params.id, type: route.query.type })
+  },
+  {
+    path: '/project/:id',
+    name: 'ProjectDetailPage',
+    component: ProjectDetailPage,
+    props: route => ({ id: route.params.id, type: route.query.type })
+  },
   {
     path: '/error',
     name: 'error',

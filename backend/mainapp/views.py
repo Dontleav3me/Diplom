@@ -51,3 +51,31 @@ def get_item(request):
     #serializer = TelegramUserSerializer(user)
     #return Response(serializer.data, status=status.HTTP_200_OK)
     return Response("")
+@csrf_exempt
+@api_view(['GET'])
+def get_bottom_news_detail(request, id):
+    try:
+        news_item = BottomNews.objects.get(id=id)
+        serializer = BottomNewsSerializer(news_item)
+        return Response(serializer.data)
+    except BottomNews.DoesNotExist:
+        return Response(status=404, data={'message': 'BottomNews not found'})
+
+@csrf_exempt
+@api_view(['GET'])
+def get_news_top_detail(request, id):
+    try:
+        news_item = NewsTop.objects.get(id=id)
+        serializer = NewsTopSerializer(news_item)
+        return Response(serializer.data)
+    except NewsTop.DoesNotExist:
+        return Response(status=404, data={'message': 'NewsTop not found'})
+@csrf_exempt
+@api_view(['GET'])
+def get_project_detail(request, id):
+    try:
+        proj = project.objects.get(id=id)
+        serializer = ProjectSerializer(proj)
+        return Response(serializer.data)
+    except project.DoesNotExist:
+        return Response(status=404, data={'message': 'Project not found'})

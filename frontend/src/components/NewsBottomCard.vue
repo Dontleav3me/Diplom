@@ -1,5 +1,5 @@
 <template>
-  <div class="news_card" @click="this.$router.push('/item')">
+  <div class="news_card" @click="goToDetailPage">
     <img :src="image" alt="">
     <div class="news_container">
       <p class="news_heads">{{ NewsBottom.name }}</p>
@@ -23,6 +23,15 @@ export default {
   props: ['NewsBottom'],
   mounted(){
     this.image =  'http://127.0.0.1:8000'+this.NewsBottom.image
+  },
+  methods: {
+    goToDetailPage() {
+      this.$router.push({ 
+        name: 'NewsDetailPage', 
+        params: { id: this.NewsBottom.id }, 
+        query: { type: 'bottom_news' }
+      });
+    }
   }
 }
 </script>

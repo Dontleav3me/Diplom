@@ -3,6 +3,11 @@ from django.contrib import admin
 class project(models.Model):
     name = models.CharField(max_length=256)
     subname = models.CharField(max_length=1024)
+    header_items = models.CharField(max_length=256)
+    name_items = models.CharField(max_length=256)
+    subname_items = models.CharField(max_length=256)
+    img_mobile = models.ImageField(upload_to='images/')
+    img_items = models.ImageField(upload_to='images/')
 
 class Directions(models.Model):
     name = models.CharField(max_length=256)
@@ -15,6 +20,13 @@ class BottomNews(models.Model):
     time = models.CharField(max_length=256)
     dela = models.CharField(max_length=256)
     image = models.ImageField(upload_to='images/')
+    head = models.CharField(max_length=256)
+    header_items = models.CharField(max_length=256)
+    name_items = models.CharField(max_length=256)
+    subname_items = models.CharField(max_length=256)
+    img_mobile = models.ImageField(upload_to='images/')
+    img_items = models.ImageField(upload_to='images/')
+
 
 class MiniNew(models.Model):
     image = models.ImageField(upload_to='images/')
@@ -42,6 +54,13 @@ class NewsTop(models.Model):
     name = models.CharField(max_length=256)
     dela = models.CharField(max_length=512)
     time = models.CharField(max_length=256)
+    head = models.CharField(max_length=256)
+    header_items = models.CharField(max_length=256)
+    name_items = models.CharField(max_length=256)
+    subname_items = models.CharField(max_length=256)
+    img_mobile = models.ImageField(upload_to='images/')
+    img_items = models.ImageField(upload_to='images/')
+
 
 admin.site.register(project)
 admin.site.register(Directions)

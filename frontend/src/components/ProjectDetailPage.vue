@@ -9,18 +9,16 @@
         </div>
     </div>
     <p class="head_subtext_bottom">{{ subname_items }}</p>
-
   </div>
 </template>
-0
+
 <script>
 import axios from 'axios'
 
 export default {
-    props: ['userId'],
+    props: ['id', 'type'], 
     data() {
         return {
-            items: [],
             header_items: "",
             name_items: "",
             subname_items: "",
@@ -29,34 +27,38 @@ export default {
         }
     },
     mounted() {
-      this.get_solonews()
+      const type = this.$route.query.type;
+      console.log("Mounted with ID:", this.id);
+      console.log("Mounted with Type:", type);
+      this.fetchDetail(type);
     },
     methods: {
-      async get_item() {
-      try {
-        const response = await this.$axios.get('/get_item/', {
-          params: { 'user_id': this.userId }
-        });
-        this.items = response.data;
-      } catch (error) {
-        console.error('Error fetching daily reward status:', error);
-      }
-    },
-    async get_solonews(){
-      try {
-        const response = await axios.get(`http://127.0.0.1:8000/api/solo_news/`);
-        this.header_items = response.data[0].header_items;
-        this.name_items = response.data[0].name_items;
-        this.subname_items = response.data[0].subname_items;
-        this.img_mobile = 'http://127.0.0.1:8000'+response.data[0].img_mobile;
-        this.img_items = 'http://127.0.0.1:8000'+response.data[0].img_items;
-      } catch (error) {
-        console.error('Error fetching uslugi:', error);
-      }
-    },
+      async fetchDetail(type) {
+        let endpoint = '';
+        switch(type) {
+            case 'project':
+                endpoint = `http://127.0.0.1:8000/api/project_detail/${this.id}/`;
+                break;
+            default:
+                console.error('Unknown detail type');
+                return;
+        }
+
+        try {
+            const response = await axios.get(endpoint);
+            const item = response.data;
+
+            this.header_items = item.header_items;
+            this.name_items = item.name_items;
+            this.subname_items = item.subname_items;
+            this.img_mobile = 'http://127.0.0.1:8000' + item.img_mobile;
+            this.img_items = 'http://127.0.0.1:8000' + item.img_items;
+        } catch (error) {
+            console.error('Error fetching details:', error);
+        }
+    }
   }
 }
-
 </script>
 
 <style scoped>
@@ -102,6 +104,8 @@ export default {
 }
 p{
     margin: 0;
+    word-wrap: break-word;
+    white-space: normal;
 }
 img{
     border-radius: 5px;

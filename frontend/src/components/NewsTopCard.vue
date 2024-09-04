@@ -1,13 +1,13 @@
 <template>
-  <div class="header_card">
-    <img :src="image" alt="" @click="this.$router.push('/item')">
+  <div class="header_card" @click="goToDetailPage">
+    <img :src="image" alt="">
     <div class="header_card_container">
       <div class="card_head">
         <p class="card_text">{{ NewsTop.head }}</p>
         <div class="divider_card"></div>
         <p class="card_text">{{ NewsTop.date }}</p>
       </div>
-      <p class="card_main_text" @click="this.$router.push('/item')">{{ NewsTop.name }}</p>
+      <p class="card_main_text">{{ NewsTop.name }}</p>
       <div class="card_head">
         <p class="card_text">{{ NewsTop.dela }}</p>
         <div class="divider_card"></div>
@@ -27,6 +27,15 @@ export default {
   props: ['NewsTop'],
   mounted(){
     this.image = 'http://127.0.0.1:8000' + this.NewsTop.image;
+  },
+  methods: {
+    goToDetailPage() {
+      this.$router.push({ 
+        name: 'NewsDetailPage', 
+        params: { id: this.NewsTop.id }, 
+        query: { type: 'news_top' }
+      });
+    }
   }
 }
 </script>
@@ -75,6 +84,7 @@ img{
   height: 118px;
   border-radius: 5px;
   cursor: pointer;
+  object-fit: cover;
 }
 .card_main_text:hover{
   color: #0D42A8;

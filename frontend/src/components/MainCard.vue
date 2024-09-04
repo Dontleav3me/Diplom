@@ -2,7 +2,7 @@
   <div class="card">
     <p class="card_text">{{ project.name }}</p>
     <p class="card_subtext">{{ project.subname }}</p>
-    <button class="card_btn">Подробнее</button>
+    <button class="card_btn" @click="goToDetailPage">Подробнее</button>
   </div>
 </template>
 
@@ -14,6 +14,15 @@ export default {
     }
   },
   props: ['project'],
+  methods: {
+    goToDetailPage() {
+      this.$router.push({ 
+        name: 'ProjectDetailPage', 
+        params: { id: this.project.id }, 
+        query: { type: 'project' }
+      });
+    }
+  }
 }
 </script>
 
