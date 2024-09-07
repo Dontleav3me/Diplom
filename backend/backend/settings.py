@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'mainapp',
-    'corsheaders', 
+    'corsheaders',
+    'viewapp', 
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 MIDDLEWARE = [
@@ -123,6 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
