@@ -41,11 +41,11 @@
     <div class="bottom">
       <div class="bottom_left">
         <p class="bottom_text">Телеграм</p>
-        <p class="bottom_text">Tenchat</p>
         <p class="bottom_text">Вконтакте</p>
+        <p class="bottom_text">Twitter</p>
         <p class="bottom_text">Youtube</p>
       </div>
-      <div class="bottom_right pc">
+      <div class="bottom_right pc" style="display: none;">
         <p class="bottom_text">@alekseypak</p>
       </div>
     </div>

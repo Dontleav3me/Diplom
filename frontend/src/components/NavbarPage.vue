@@ -24,7 +24,7 @@
         <img src="../../static/img/logo.svg" alt="" draggable="false"
         @click="resetMenuItem">
       </div>
-      <router-link to="/news" style="text-decoration: none;">
+      <router-link to="/news" style="text-decoration: none; display: none;">
         <div 
           class="nav_container" 
           :class="{ selected: selectedMenuItem === 'Новости и события' }"
@@ -73,7 +73,6 @@
         <a href="/">Главная</a>
         <a href="/about">О нас</a>
         <a href="/trends">Направления развития</a>
-        <a href="/news">Новости и события</a>
         <a href="/partner">Партнерство</a>
 <!--         <a href="#">Новости</a>
         <a href="#">Вакансии</a>
@@ -87,7 +86,7 @@
           <a href="#">Почта</a>
           <a href="#">Youtube</a>
         </div>
-        <div class="mailing">
+        <div class="mailing" style="display: none;">
           <div class="mailing_container">
             <p class="mailing_text">Подписаться на рассылку</p>
             <img src="../../static/img/mailing.svg" alt="">
@@ -305,6 +304,7 @@ p {
     flex-direction: column;
     margin-top: auto; 
     padding-top: 20px;
+    margin-bottom: 95px;
   }
   
   .socials p {

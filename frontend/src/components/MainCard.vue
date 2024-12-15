@@ -2,7 +2,7 @@
   <div class="card">
     <p class="card_text">{{ project.name }}</p>
     <p class="card_subtext">{{ project.subname }}</p>
-    <button class="card_btn" @click="goToDetailPage">Подробнее</button>
+    <button class="card_btn" @click="goToDetailPage" style="display: none">Подробнее</button>
   </div>
 </template>
 

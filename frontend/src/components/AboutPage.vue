@@ -20,6 +20,23 @@
     <p class="tale_main_text">Фонд активно участвовал в реализации значимых проектов, включая строительство и реконструкцию исторических памятников и медицинских учреждений, а также поддержку социальных программ. Среди них – Софийский собор в городе Пушкин, памятник Александру Невскому в Санкт-Петербурге, скульптурная композиция в честь Победы русского оружия на Неве в Усть-Ижоре на месте легендарной победы А. Невского. Создание медицинского центра "РОЛАХ-Мед" в городе Пушкин. По сей день фонд оказывает посильную помощь фонду «Дети Блокадного Ленинграда».</p>
     <p class="tale_main_text">Значимым достижением в 2014 году было создание медицинского православного факультета «От духовного здравия - к физическому» в котором на сегодняшний день занимается около 100 человек, уже в структуре Александро-Невской Лавры. В числе самых важных проектов МБОФ им. Александра Невского является: Принесение Благодатного Огня из Иерусалима к пасхальному богослужению 2023 года в Казанский кафедральный собор Санкт-Петербурга, которое совершил Митрополит Санкт-Петербургский и Ладожский. В пасхальную ночь волонтерами Общественного фонда содействия развитию Ленинградской области и депутатами Законодательного собрания Ленинградской области светильники с Благодатным огнем были доставлены по храмам и обителям Санкт-Петербурга и Ленинградской области, в том числе: в Свято-Троицкую Александро-Невскую Лавру, Санкт-Петербургский Новодевичий монастырь, Гатчинский кафедральный собор святого апостола Павла и многие другие храмы.</p>
     <p class="tale_main_text">Фонд продолжает свою миссию и в настоящее время, являясь надежным партнером в реализации социальных программ и инициатив. Он оказывает помощь не только ветеранам, инвалидам и их семьям, но также принимает активное участие в борьбе с распространением новых инфекций, включая программы по противодействию коронавирусной инфекции. Это лишь малая часть истории фонда, но каждая страница этой истории наполнена добротой, солидарностью и надеждой. Мы гордимся своим пути и стремимся делать мир лучше каждый день.</p>
+    <p class="president">Команда фонда</p>
+    <div class="team_container">
+      <div class="team_member">
+        <img src="../../static/img/Direktor.jpg" alt="Директор">
+        <div class="overlay">
+          <p class="name">Усов Максим Васильевич</p>
+          <p class="position">Генеральный директор фонда</p>
+        </div>
+      </div>
+      <div class="team_member">
+        <img src="../../static/img/Vitse-prizedent.jpg" alt="Вице-президент">
+        <div class="overlay">
+          <p class="name">Беликов Вадим Вячеславович</p>
+          <p class="position">Вице-президент фонда</p>
+        </div>
+      </div>
+    </div>
     <p class="president">Президент фонда</p>
     <div class="president_container">
       <div class="president_left">
@@ -244,6 +261,65 @@ button:hover {
   color: #FFFFFF;
   background: #0D42A8;
 }
+.team_container{
+  display: flex;
+  gap: 10px;
+}
+.team_conitaner img{
+  width: 25%;
+  border-radius: 5px;
+}
+.team_member {
+  position: relative;
+  width: 300px; /* Ширина блока, можно изменить */
+  height: 400px; /* Высота блока, можно изменить */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.team_member img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 5px;
+}
+
+.team_member:hover img {
+  transform: scale(1.1);
+  border-radius: 5px;
+}
+.name{
+  font-family: Inter Athelas;
+}
+.position{
+  font-family: Inter Regular;
+}
+.overlay {
+  position: absolute;
+  bottom: -100%; 
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  transition: bottom 0.3s ease;
+}
+
+.team_member:hover .overlay {
+  bottom: 20px;
+}
+
+.overlay .name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.overlay .position {
+  font-size: 14px;
+  margin-top: 5px;
+}
 .mobile{
   display: none;
 }
@@ -315,15 +391,15 @@ button:hover {
   }
   .president_text{
     font-family: Inter Regular;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
-    line-height: 12.1px;
+    line-height: 16.1px;
     letter-spacing: -0.01em;
     text-align: justify;
   }
   .president_name{
     font-family: Inter Regular;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 600;
     line-height: 12.1px;
     letter-spacing: -0.01em;
@@ -331,7 +407,7 @@ button:hover {
   }
   .place{
     font-family: Inter Regular;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 400;
     line-height: 12.1px;
     letter-spacing: -0.01em;
@@ -345,9 +421,9 @@ button:hover {
   }
   .help_text{
     font-family: Inter SemiBold;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
-    line-height: 12.1px;
+    line-height: 16.1px;
     letter-spacing: -0.01em;
     text-align: justify;
   }
@@ -370,6 +446,46 @@ button:hover {
     line-height: 12.1px;
     letter-spacing: -0.01em;
     text-align: left;
+  }
+  .team_container {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .team_member {
+    width: 70%;
+    height: auto;
+  }
+
+  .team_member img {
+    width: 100%;
+    height: auto;
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  .overlay .name {
+    font-size: 16px;
+  }
+
+  .overlay .position {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  .president_container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .president_left {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+  .place{
+    display: none;
   }
 }
 </style>

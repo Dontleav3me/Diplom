@@ -20,10 +20,10 @@
       <div class="project_content">
         <MainCard v-for="(project, index) in projects" :key="index" :project="project"></MainCard>
       </div>
-      <div class="news_container">
+      <div class="news_container" style="display: none;">
         <p class="news">Последние новости</p>
       </div>
-      <div class="news_container">
+      <div class="news_container" style="display: none;">
         <MainNewsCard v-for="(mininew, index) in mininews" :key="index" :mininew="mininew"></MainNewsCard>
       </div>
     </div>

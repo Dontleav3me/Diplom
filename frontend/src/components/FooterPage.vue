@@ -7,8 +7,8 @@
           <div class="submenu">
             <p class="buttons_subtext" @click="this.$router.push('/about')">О нас</p>
             <p class="buttons_subtext" @click="this.$router.push('/trends')">Направления</p>
-            <p class="buttons_subtext" @click="this.$router.push('/news')">Новости</p>
-            <p class="buttons_subtext" @click="this.$router.push('/')">Карта сайта</p>
+            <p class="buttons_subtext" @click="this.$router.push('/news') " style="display: none;">Новости</p>
+            <p class="buttons_subtext" @click="this.$router.push('/')">Главная</p>
           </div>
         </div>
         <div class="menu">
@@ -17,7 +17,7 @@
             <p class="buttons_subtext" @click="this.$router.push('/partner')">Партнёрство</p>
             <p class="buttons_subtext" @click="this.$router.push('/contact')">Вакансии</p>
             <p class="buttons_subtext" @click="this.$router.push('/contact')">Контакты</p>
-            <p class="buttons_subtext">Награды</p>
+            <p class="buttons_subtext" style="display: none;">Награды</p>
           </div>
         </div>
         <div class="menu">
@@ -25,21 +25,20 @@
           <div class="submenu">
             <p class="buttons_subtext">Телеграм</p>
             <p class="buttons_subtext">Вконтакте</p>
-            <p class="buttons_subtext">Tenchat</p>
+            <p class="buttons_subtext">Twitter</p>
             <p class="buttons_subtext">Почта</p>
-            <p class="buttons_subtext">YouTube</p>
           </div>
         </div>
       </div>
       <div class="mailing">
-        <div class="mailing_container">
-          <p class="mailing_text">Подписаться на рассылку</p>
+        <div class="mailing_container" style="display: none;">
+          <p class="mailing_text" >Подписаться на рассылку</p>
           <img src="../../static/img/mailing.svg" alt="">
         </div>
         <div class="divider"></div>
       </div>
     </div>
-    <div class="mailing_mobile">
+    <div class="mailing_mobile" style="display: none;">
       <div class="mailing_container">
         <p class="mailing_text">Подписаться на рассылку</p>
         <img src="../../static/img/mailing.svg" alt="">
@@ -49,8 +48,8 @@
     <div class="footer_bottom">
       <div class="divider"></div>
       <div class="footer_wrapper">
-        <p class="bottom_text">МБОФ им. А. Невского © 1996–2024</p>
-        <div class="bottom_right">
+        <p class="bottom_text">МБОФ им. А. Невского © 1996–2025</p>
+        <div class="bottom_right" style="display: none;">
           <p class="bottom_text">Terms & policies</p>
           <p class="bottom_text">Privacy policy</p>
         </div>
