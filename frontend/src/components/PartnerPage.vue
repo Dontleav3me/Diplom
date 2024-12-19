@@ -122,7 +122,7 @@ p {
 }
 .card_container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(1fr);
   gap: 45px;
   justify-content: center;
@@ -133,6 +133,7 @@ p {
   display: flex;
   align-items: center;
   width: 300px;
+  height: 206px;
   border-radius: 5px;
   border: 1px solid #0D42A8;
   background: white;
