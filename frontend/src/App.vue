@@ -59,5 +59,6 @@ export default {
 }
 body{
   margin: 0;
+  overflow: visible !important;
 }
 </style>

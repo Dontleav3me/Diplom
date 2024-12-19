@@ -49,13 +49,6 @@
         <p class="bottom_text">@alekseypak</p>
       </div>
     </div>
-    <p class="bottom_text_info mobile">Рады предоставить дополнительную информацию о работе МБОФ им. А. Невского и ответить на ваши вопросы. Для публикации в СМИ или для приглашения команды фонда на мероприятия пишите по контактам указанным для СМИ </p>
-    <div class="niz mobile">
-      <div class="bottom_right mobile">
-        <p class="bottom_text">@alekseypak</p>
-      </div>
-      <p class="bottom_text_black">Контакты для СМИ</p>
-    </div>
   </div>
 </template>
 

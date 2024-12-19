@@ -5,6 +5,15 @@
       <button class="head_btn" @click="this.$router.push('/trends')">Направления и развития</button>
       <div class="divider"></div>
       <p class="subheader">Фонд помощи ветеранам, инвалидам правоохранительных органов и их семей, относящимся в то время практически к малоимущим слоям населения</p>
+      <div class="slider">
+        <button class="slider-btn prev-btn" @click="prevSlide">&#9664;</button>
+        <div class="slider-wrapper" :style="{ transform: `translateX(${-currentIndex * 100}%)` }">
+          <div class="slider-image" v-for="(image, index) in images" :key="index">
+            <img :src="image" :alt="'Slide ' + (index + 1)" />
+          </div>
+        </div>
+        <button class="slider-btn next-btn" @click="nextSlide">&#9654;</button>
+      </div>
       <div class="proekt_container">
         <div class="proekt_content">
           <p class="proekt_text">
@@ -39,10 +48,32 @@ export default {
   data() {
     return {
       projects: [],
-      mininews: []
+      mininews: [],
+      images: [
+        require('@/assets/crunch1.jpg'),
+        require('@/assets/kazanski2.jpg'),
+        require('@/assets/4.jpg'),
+      ],
+      currentIndex: 0,
     }
   },  
   methods: {
+    prevSlide() {
+      this.currentIndex =
+        this.currentIndex > 0 ? this.currentIndex - 1 : this.images.length - 1;
+    },
+    nextSlide() {
+      this.currentIndex =
+        this.currentIndex < this.images.length - 1 ? this.currentIndex + 1 : 0;
+    },
+    startAutoSlide() {
+      this.autoSlideInterval = setInterval(() => {
+        this.nextSlide();
+      }, 5000);
+    },
+    stopAutoSlide() {
+      clearInterval(this.autoSlideInterval);
+    },
     async get_projects(){
       try {
         const response = await axios.get(`http://127.0.0.1:8000/api/projects/`);
@@ -61,15 +92,76 @@ export default {
       }
     },
 },
+beforeUnmount() {
+    this.stopAutoSlide();
+  },
 async mounted(){
   await this.get_projects();
   await this.get_mininews();
+  this.startAutoSlide();
 }
   
 }
 </script>
 
 <style scoped> 
+.slider {
+  position: relative;
+  width: 80%;
+  height: 550px;
+  overflow: hidden;
+  margin: 20px auto;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-image {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 .bg{
   position: relative;
   z-index: 1;
@@ -292,6 +384,27 @@ video {
     background-size: 100% 450px, 100% 450px, 100% 500px;
     background-repeat: no-repeat;
   }
-  
+  .slider {
+    width: 90%;
+    height: auto;
+  }
+
+  .slider-image img {
+    height: 250px;
+  }
+
+  .slider-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .prev-btn {
+    left: 5px;
+  }
+
+  .next-btn {
+    right: 5px;
+  }
 }
 </style>

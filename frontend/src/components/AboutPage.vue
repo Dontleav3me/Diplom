@@ -36,6 +36,13 @@
           <p class="position">Вице-президент фонда</p>
         </div>
       </div>
+      <div class="team_member">
+        <img src="../../static/img/alina.jpg" alt="Вице-президент">
+        <div class="overlay">
+          <p class="name">Новрузова Алина Афлатуновна</p>
+          <p class="position">Директор по медико-социальной<br>программе</p>
+        </div>
+      </div>
     </div>
     <p class="president">Президент фонда</p>
     <div class="president_container">
@@ -211,7 +218,7 @@ p{
   text-align: justify;
 }
 .president_left img{
-  width: 70%;
+  width: 90%;
   border-radius: 5px;
 }
 .president_right{
@@ -271,8 +278,8 @@ button:hover {
 }
 .team_member {
   position: relative;
-  width: 300px; /* Ширина блока, можно изменить */
-  height: 400px; /* Высота блока, можно изменить */
+  width: 400px; /* Ширина блока, можно изменить */
+  height: 500px; /* Высота блока, можно изменить */
   overflow: hidden;
   border-radius: 5px;
 }
